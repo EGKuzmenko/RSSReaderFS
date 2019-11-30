@@ -8,11 +8,11 @@
 
 import Foundation
 
-struct News {
+struct News: Decodable {
     let articles: [Article]
 }
 
-struct Article {
+struct Article: Decodable {
     let source: Source
     let author: String?
     let title: String
@@ -29,7 +29,7 @@ struct Article {
     }
 }
 
-struct Source: Codable {
+struct Source: Decodable {
     let id: String?
     let name: String
 }
