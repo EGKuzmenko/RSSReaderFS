@@ -16,6 +16,7 @@
 		C94DEE53238C3F5900708074 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C94DEE51238C3F5900708074 /* Main.storyboard */; };
 		C94DEE55238C3F5900708074 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C94DEE54238C3F5900708074 /* Assets.xcassets */; };
 		C94DEE58238C3F5900708074 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C94DEE56238C3F5900708074 /* LaunchScreen.storyboard */; };
+		C9B016872392229D00E87634 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B016862392229D00E87634 /* News.swift */; };
 		C9D5DAEB238FB8D700583F2A /* NewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9D5DAEA238FB8D700583F2A /* NewsCell.xib */; };
 		C9D5DAED238FB9AB00583F2A /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D5DAEC238FB9AB00583F2A /* NewsCell.swift */; };
 /* End PBXBuildFile section */
@@ -32,6 +33,7 @@
 		C94DEE54238C3F5900708074 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C94DEE57238C3F5900708074 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C94DEE59238C3F5900708074 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9B016862392229D00E87634 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		C9D5DAEA238FB8D700583F2A /* NewsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsCell.xib; sourceTree = "<group>"; };
 		C9D5DAEC238FB9AB00583F2A /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,6 +88,7 @@
 				C9266FD8238FF12700FA2E16 /* IFeddPresnter.swift */,
 				C9266FDA238FF28500FA2E16 /* IFeedView.swift */,
 				C9266FDC238FF4E700FA2E16 /* FeedPresenter.swift */,
+				C9B016862392229D00E87634 /* News.swift */,
 			);
 			path = RSSReaderFS;
 			sourceTree = "<group>";
@@ -166,6 +169,7 @@
 				C94DEE50238C3F5900708074 /* FeedViewController.swift in Sources */,
 				C94DEE4C238C3F5900708074 /* AppDelegate.swift in Sources */,
 				C9D5DAED238FB9AB00583F2A /* NewsCell.swift in Sources */,
+				C9B016872392229D00E87634 /* News.swift in Sources */,
 				C94DEE4E238C3F5900708074 /* SceneDelegate.swift in Sources */,
 				C9266FDD238FF4E700FA2E16 /* FeedPresenter.swift in Sources */,
 				C9266FD9238FF12700FA2E16 /* IFeddPresnter.swift in Sources */,
