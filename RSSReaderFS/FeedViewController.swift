@@ -22,7 +22,10 @@ class FeedViewController: UIViewController {
         presenter.onViewReadyevent()
     }
 
-
+    @IBAction func updateButtonTap(_ sender: UIBarButtonItem) {
+        presenter.onUpdateBuutonTapEvent()
+    }
+    
 }
 
 extension FeedViewController: UITableViewDataSource {
@@ -46,13 +49,11 @@ extension FeedViewController: IFeedView {
         
         tableView.dataSource = self
         let nib = UINib(nibName: "NewsCell", bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: "FeedCell")
+        tableView.register(nib, forCellReuseIdentifier: "NewsCell")
     }
     
     func updateView() {
         tableView.reloadData()
     }
-    
-    
 }
 

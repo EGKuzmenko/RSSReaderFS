@@ -11,7 +11,10 @@ import Foundation
 class FeedPresenter: IFeddPresnter {
     
     private weak var view: IFeedView?
-    private var items: [Data] = []
+    
+    private var items: [Article] = []
+    
+    private var networkManager = NetworkManager()
     
     init(view: IFeedView) {
         self.view = view
@@ -25,7 +28,16 @@ class FeedPresenter: IFeddPresnter {
         return items.count
     }
     
-    func itemForRowIndexPath(indexPath: IndexPath) -> Data {
+    func itemForRowIndexPath(indexPath: IndexPath) -> Article {
         return items[indexPath.row]
+    }
+    
+    func onUpdateBuutonTapEvent() {
+        networkManager.loadData { [weak self] (articles) in
+            self?.items = articles
+            DispatchQueue.main.async {
+                self?.view?.updateView()
+            }
+        }
     }
 }

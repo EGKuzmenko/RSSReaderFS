@@ -13,7 +13,8 @@ class NewsCell: UITableViewCell {
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var newsLabel: UILabel!
     
-    func configureWith(article: Data) {
-        
+    func configureWith(article: Article) {
+        headerLabel.text = article.title
+        newsLabel.text = article.articleDescription
     }
 }

@@ -11,5 +11,6 @@ import Foundation
 protocol IFeddPresnter: AnyObject {
     func onViewReadyevent()
     func numberOfRowsInSection(section: Int) -> Int
-    func itemForRowIndexPath(indexPath: IndexPath) -> Data 
+    func itemForRowIndexPath(indexPath: IndexPath) -> Article
+    func onUpdateBuutonTapEvent()
 }
