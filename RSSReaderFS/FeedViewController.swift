@@ -35,8 +35,16 @@ extension FeedViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NewsCell") as! NewsCell
-        let item = presenter.itemForRowIndexPath(indexPath: indexPath)
+        let item = presenter.itemForRowIndexPath(indexPath: indexPath, imageResult: { pics in
+            DispatchQueue.main.async {
+                cell.pictureView?.image = pics
+            }
+        })
         cell.configureWith(article: item)
+        
+        
+        
+        
         return cell
     }
     

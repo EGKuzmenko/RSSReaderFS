@@ -7,10 +7,11 @@
 //
 
 import Foundation
+import class UIKit.UIImage
 
 protocol IFeddPresnter: AnyObject {
     func onViewReadyevent()
     func numberOfRowsInSection(section: Int) -> Int
-    func itemForRowIndexPath(indexPath: IndexPath) -> Article
+    func itemForRowIndexPath(indexPath: IndexPath, imageResult: @escaping (UIImage?)->Void) -> Article
     func onUpdateBuutonTapEvent()
 }

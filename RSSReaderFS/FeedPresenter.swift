@@ -7,8 +7,10 @@
 //
 
 import Foundation
+import UIKit
 
 class FeedPresenter: IFeddPresnter {
+
     
     private weak var view: IFeedView?
     
@@ -28,8 +30,16 @@ class FeedPresenter: IFeddPresnter {
         return items.count
     }
     
-    func itemForRowIndexPath(indexPath: IndexPath) -> Article {
-        return items[indexPath.row]
+    func itemForRowIndexPath(indexPath: IndexPath, imageResult: @escaping (UIImage?)->Void) -> Article {
+        let item = items[indexPath.row]
+        if let string = item.urlToImage, let url = URL(string: string) {
+            let task = self.networkManager.loadImage(url: url, completion: imageResult)
+        } else {
+            imageResult(nil)
+        }
+        
+        
+        return item
     }
     
     func onUpdateBuutonTapEvent() {
@@ -40,4 +50,6 @@ class FeedPresenter: IFeddPresnter {
             }
         }
     }
+    
+    
 }

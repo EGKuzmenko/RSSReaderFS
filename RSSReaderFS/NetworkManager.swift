@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import class UIKit.UIImage
 
 class NetworkManager {
     private let session: URLSession = URLSession.shared
@@ -25,6 +26,18 @@ class NetworkManager {
         }
         
         task.resume()
+    }
+    
+    func loadImage(url: URL, completion: @escaping (UIImage) -> Void) -> URLSessionDownloadTask {
+        
+        let task = session.downloadTask(with: url) { (url, response, error) in
+            
+            let imageData = try! UIImage(data: Data(contentsOf: url!))
+            completion(imageData!)
+        }
+        
+        task.resume()
+        return task
     }
 }
 
