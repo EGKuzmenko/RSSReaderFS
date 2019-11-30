@@ -18,6 +18,8 @@
 		C94DEE58238C3F5900708074 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C94DEE56238C3F5900708074 /* LaunchScreen.storyboard */; };
 		C9B016872392229D00E87634 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B016862392229D00E87634 /* News.swift */; };
 		C9B016892392244100E87634 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B016882392244100E87634 /* NetworkManager.swift */; };
+		C9B0168B23923F9700E87634 /* DateFormater+ISO8601.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B0168A23923F9700E87634 /* DateFormater+ISO8601.swift */; };
+		C9B448442392438800263559 /* RSSDateFormater.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B448432392438800263559 /* RSSDateFormater.swift */; };
 		C9D5DAEB238FB8D700583F2A /* NewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9D5DAEA238FB8D700583F2A /* NewsCell.xib */; };
 		C9D5DAED238FB9AB00583F2A /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D5DAEC238FB9AB00583F2A /* NewsCell.swift */; };
 /* End PBXBuildFile section */
@@ -36,6 +38,8 @@
 		C94DEE59238C3F5900708074 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9B016862392229D00E87634 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		C9B016882392244100E87634 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		C9B0168A23923F9700E87634 /* DateFormater+ISO8601.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormater+ISO8601.swift"; sourceTree = "<group>"; };
+		C9B448432392438800263559 /* RSSDateFormater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSDateFormater.swift; sourceTree = "<group>"; };
 		C9D5DAEA238FB8D700583F2A /* NewsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsCell.xib; sourceTree = "<group>"; };
 		C9D5DAEC238FB9AB00583F2A /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,6 +96,8 @@
 				C9266FDC238FF4E700FA2E16 /* FeedPresenter.swift */,
 				C9B016862392229D00E87634 /* News.swift */,
 				C9B016882392244100E87634 /* NetworkManager.swift */,
+				C9B0168A23923F9700E87634 /* DateFormater+ISO8601.swift */,
+				C9B448432392438800263559 /* RSSDateFormater.swift */,
 			);
 			path = RSSReaderFS;
 			sourceTree = "<group>";
@@ -174,7 +180,9 @@
 				C94DEE4C238C3F5900708074 /* AppDelegate.swift in Sources */,
 				C9D5DAED238FB9AB00583F2A /* NewsCell.swift in Sources */,
 				C9B016872392229D00E87634 /* News.swift in Sources */,
+				C9B0168B23923F9700E87634 /* DateFormater+ISO8601.swift in Sources */,
 				C94DEE4E238C3F5900708074 /* SceneDelegate.swift in Sources */,
+				C9B448442392438800263559 /* RSSDateFormater.swift in Sources */,
 				C9266FDD238FF4E700FA2E16 /* FeedPresenter.swift in Sources */,
 				C9266FD9238FF12700FA2E16 /* IFeddPresnter.swift in Sources */,
 			);

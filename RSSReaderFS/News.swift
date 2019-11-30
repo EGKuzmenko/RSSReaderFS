@@ -19,13 +19,34 @@ struct Article: Decodable {
     let articleDescription: String?
     let url: String
     let urlToImage: String?
-    let publishedAt: String
-    let content: String?
+    let publishedAt: Date
+//    let content: String?
 
     enum CodingKeys: String, CodingKey {
         case source, author, title
         case articleDescription = "description"
         case url, urlToImage, publishedAt, content
+    }
+    
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        source = try container.decode(Source.self, forKey: .source)
+        author = try? container.decode(String.self, forKey: .author)
+        title = try container.decode(String.self, forKey: .title)
+        articleDescription = try? container.decode(String.self, forKey: .articleDescription)
+        url = try container.decode(String.self, forKey: .url)
+        urlToImage = try? container.decode(String.self, forKey: .urlToImage)
+
+        let dateString = try container.decode(String.self, forKey: .publishedAt)
+        let formatter = DateFormatter.iso8601Full
+          if let date = formatter.date(from: dateString) {
+              publishedAt = date
+          } else {
+              throw DecodingError.dataCorruptedError(forKey: .publishedAt,
+                    in: container,
+                    debugDescription: "Date string does not match format expected by formatter.")
+          }
     }
 }
 

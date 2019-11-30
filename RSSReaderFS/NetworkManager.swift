@@ -12,7 +12,7 @@ class NetworkManager {
     private let session: URLSession = URLSession.shared
     
     func loadData(completion: @escaping ([Article]) -> Void) {
-        guard let url = URL(string: "https://newsapi.org/v2/top-headlines?country=ru&apiKey=37826ad6a0404352b3f3181d2d584aa9") else {
+        guard let url = URL(string: "https://newsapi.org/v2/top-headlines?country=us&category=science&apiKey=37826ad6a0404352b3f3181d2d584aa9") else {
             return
         }
         

@@ -12,9 +12,11 @@ class NewsCell: UITableViewCell {
     
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var newsLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
     
     func configureWith(article: Article) {
         headerLabel.text = article.title
         newsLabel.text = article.articleDescription
+        dateLabel.text = RSSDateFormater.string(from: article.publishedAt)
     }
 }
