@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="161" id="gIY-8G-uDX" customClass="NewsCell" customModule="RSSReaderFS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="161"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gIY-8G-uDX" id="0ga-Tc-3Yl">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="161"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Header" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="50H-Va-EuK">
+                        <rect key="frame" x="8" y="8" width="398" height="24"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l8l-pR-0Qc">
+                        <rect key="frame" x="8" y="47" width="398" height="106"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="50H-Va-EuK" secondAttribute="trailing" constant="8" id="PYT-at-xJK"/>
+                    <constraint firstAttribute="trailing" secondItem="l8l-pR-0Qc" secondAttribute="trailing" constant="8" id="Uau-0o-0zC"/>
+                    <constraint firstItem="l8l-pR-0Qc" firstAttribute="leading" secondItem="0ga-Tc-3Yl" secondAttribute="leading" constant="8" id="Xu9-n0-2tR"/>
+                    <constraint firstItem="l8l-pR-0Qc" firstAttribute="top" secondItem="50H-Va-EuK" secondAttribute="bottom" constant="15" id="aGE-At-uOY"/>
+                    <constraint firstItem="50H-Va-EuK" firstAttribute="top" secondItem="0ga-Tc-3Yl" secondAttribute="top" constant="8" id="oaj-RS-O5p"/>
+                    <constraint firstItem="50H-Va-EuK" firstAttribute="leading" secondItem="0ga-Tc-3Yl" secondAttribute="leading" constant="8" id="vOB-6x-zte"/>
+                    <constraint firstAttribute="bottom" secondItem="l8l-pR-0Qc" secondAttribute="bottom" constant="8" id="zg0-1v-CNB"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="headerLabel" destination="50H-Va-EuK" id="20M-QC-WkC"/>
+                <outlet property="newsLabel" destination="l8l-pR-0Qc" id="hwS-Lk-qWd"/>
+            </connections>
+            <point key="canvasLocation" x="128.98550724637681" y="86.049107142857139"/>
+        </tableViewCell>
+    </objects>
+</document>
