@@ -28,16 +28,19 @@ class NetworkManager {
         task.resume()
     }
     
-    func loadImage(url: URL, completion: @escaping (UIImage) -> Void) -> URLSessionDownloadTask {
+    func loadImage(url: URL, completion: @escaping (UIImage) -> Void) {
         
         let task = session.downloadTask(with: url) { (url, response, error) in
             
-            let imageData = try! UIImage(data: Data(contentsOf: url!))
+            guard let url = url else {
+                return
+            }
+            
+            let imageData = try! UIImage(data: Data(contentsOf: url))
             completion(imageData!)
         }
         
         task.resume()
-        return task
-    }
+        }
 }
 

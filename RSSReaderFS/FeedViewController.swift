@@ -42,13 +42,8 @@ extension FeedViewController: UITableViewDataSource {
         })
         cell.configureWith(article: item)
         
-        
-        
-        
         return cell
     }
-    
-    
 }
 
 extension FeedViewController: IFeedView {

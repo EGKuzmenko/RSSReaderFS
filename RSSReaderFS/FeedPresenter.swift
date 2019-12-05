@@ -30,10 +30,10 @@ class FeedPresenter: IFeddPresnter {
         return items.count
     }
     
-    func itemForRowIndexPath(indexPath: IndexPath, imageResult: @escaping (UIImage?)->Void) -> Article {
+    func itemForRowIndexPath(indexPath: IndexPath, imageResult: @escaping (UIImage?) -> Void) -> Article {
         let item = items[indexPath.row]
         if let string = item.urlToImage, let url = URL(string: string) {
-            let task = self.networkManager.loadImage(url: url, completion: imageResult)
+            self.networkManager.loadImage(url: url, completion: imageResult)
         } else {
             imageResult(nil)
         }
