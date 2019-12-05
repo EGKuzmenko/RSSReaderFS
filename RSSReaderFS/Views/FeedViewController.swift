@@ -11,7 +11,7 @@ import UIKit
 class FeedViewController: UIViewController {
 
     
-    private lazy var presenter: IFeedPresnter = {
+    private lazy var presenter: IFeedPresenter = {
         return FeedPresenter(view: self)
     }()
     

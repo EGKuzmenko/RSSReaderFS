@@ -9,7 +9,7 @@
 import Foundation
 import class UIKit.UIImage
 
-protocol IFeedPresnter: AnyObject {
+protocol IFeedPresenter: AnyObject {
     func onViewReadyevent()
     func numberOfRowsInSection(section: Int) -> Int
     func itemForRowIndexPath(indexPath: IndexPath, imageResult: @escaping (UIImage?)->Void) -> Article

@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class FeedPresenter: IFeedPresnter {
+class FeedPresenter: IFeedPresenter {
 
     
     private weak var view: IFeedView?

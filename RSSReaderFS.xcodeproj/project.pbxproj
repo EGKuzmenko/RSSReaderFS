@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C9266FD9238FF12700FA2E16 /* IFeedPresnter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9266FD8238FF12700FA2E16 /* IFeedPresnter.swift */; };
+		C9266FD9238FF12700FA2E16 /* IFeedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9266FD8238FF12700FA2E16 /* IFeedPresenter.swift */; };
 		C9266FDB238FF28500FA2E16 /* IFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9266FDA238FF28500FA2E16 /* IFeedView.swift */; };
 		C9266FDD238FF4E700FA2E16 /* FeedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9266FDC238FF4E700FA2E16 /* FeedPresenter.swift */; };
 		C94DEE4C238C3F5900708074 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94DEE4B238C3F5900708074 /* AppDelegate.swift */; };
@@ -26,7 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C9266FD8238FF12700FA2E16 /* IFeedPresnter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IFeedPresnter.swift; sourceTree = "<group>"; };
+		C9266FD8238FF12700FA2E16 /* IFeedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IFeedPresenter.swift; sourceTree = "<group>"; };
 		C9266FDA238FF28500FA2E16 /* IFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IFeedView.swift; sourceTree = "<group>"; };
 		C9266FDC238FF4E700FA2E16 /* FeedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPresenter.swift; sourceTree = "<group>"; };
 		C94DEE48238C3F5900708074 /* RSSReaderFS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSSReaderFS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,13 +57,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C9266FDE238FF6DE00FA2E16 /* Modules */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Modules;
-			sourceTree = "<group>";
-		};
 		C94DEE3F238C3F5900708074 = {
 			isa = PBXGroup;
 			children = (
@@ -83,26 +76,90 @@
 		C94DEE4A238C3F5900708074 /* RSSReaderFS */ = {
 			isa = PBXGroup;
 			children = (
-				C9266FDE238FF6DE00FA2E16 /* Modules */,
-				C94DEE4B238C3F5900708074 /* AppDelegate.swift */,
-				C94DEE4D238C3F5900708074 /* SceneDelegate.swift */,
-				C94DEE4F238C3F5900708074 /* FeedViewController.swift */,
-				C94DEE51238C3F5900708074 /* Main.storyboard */,
-				C94DEE54238C3F5900708074 /* Assets.xcassets */,
-				C94DEE56238C3F5900708074 /* LaunchScreen.storyboard */,
-				C94DEE59238C3F5900708074 /* Info.plist */,
+				C9D3179A2399388C00AA6F62 /* Extensions */,
+				C9D317922399363700AA6F62 /* Storyboards */,
+				C9D31794239936AD00AA6F62 /* Presenters */,
+				C9D317952399378B00AA6F62 /* Views */,
+				C9D31796239937CA00AA6F62 /* Models */,
+				C9D317972399380A00AA6F62 /* Application */,
+				C9D317982399382C00AA6F62 /* Resources */,
+				C9D317992399383B00AA6F62 /* Networking */,
 				C9D5DAEA238FB8D700583F2A /* NewsCell.xib */,
-				C9D5DAEC238FB9AB00583F2A /* NewsCell.swift */,
-				C9266FD8238FF12700FA2E16 /* IFeedPresnter.swift */,
-				C9266FDA238FF28500FA2E16 /* IFeedView.swift */,
-				C9266FDC238FF4E700FA2E16 /* FeedPresenter.swift */,
-				C9B016862392229D00E87634 /* News.swift */,
-				C9B016882392244100E87634 /* NetworkManager.swift */,
-				C9B0168A23923F9700E87634 /* DateFormater+ISO8601.swift */,
 				C9B448432392438800263559 /* RSSDateFormater.swift */,
-				C9D3178F23992B2300AA6F62 /* URLFactory.swift */,
 			);
 			path = RSSReaderFS;
+			sourceTree = "<group>";
+		};
+		C9D317922399363700AA6F62 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				C94DEE51238C3F5900708074 /* Main.storyboard */,
+				C94DEE56238C3F5900708074 /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		C9D31794239936AD00AA6F62 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				C9266FDC238FF4E700FA2E16 /* FeedPresenter.swift */,
+				C9266FD8238FF12700FA2E16 /* IFeedPresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		C9D317952399378B00AA6F62 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C94DEE4F238C3F5900708074 /* FeedViewController.swift */,
+				C9266FDA238FF28500FA2E16 /* IFeedView.swift */,
+				C9D5DAEC238FB9AB00583F2A /* NewsCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C9D31796239937CA00AA6F62 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C9B016862392229D00E87634 /* News.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C9D317972399380A00AA6F62 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				C94DEE4B238C3F5900708074 /* AppDelegate.swift */,
+				C94DEE4D238C3F5900708074 /* SceneDelegate.swift */,
+				C94DEE59238C3F5900708074 /* Info.plist */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		C9D317982399382C00AA6F62 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C94DEE54238C3F5900708074 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C9D317992399383B00AA6F62 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				C9B016882392244100E87634 /* NetworkManager.swift */,
+				C9D3178F23992B2300AA6F62 /* URLFactory.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		C9D3179A2399388C00AA6F62 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C9B0168A23923F9700E87634 /* DateFormater+ISO8601.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,7 +245,7 @@
 				C94DEE4E238C3F5900708074 /* SceneDelegate.swift in Sources */,
 				C9B448442392438800263559 /* RSSDateFormater.swift in Sources */,
 				C9266FDD238FF4E700FA2E16 /* FeedPresenter.swift in Sources */,
-				C9266FD9238FF12700FA2E16 /* IFeedPresnter.swift in Sources */,
+				C9266FD9238FF12700FA2E16 /* IFeedPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,7 +390,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = RSSReaderFS/Info.plist;
+				INFOPLIST_FILE = RSSReaderFS/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -350,7 +407,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = RSSReaderFS/Info.plist;
+				INFOPLIST_FILE = RSSReaderFS/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
