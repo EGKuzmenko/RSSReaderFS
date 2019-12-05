@@ -31,13 +31,15 @@ class FeedPresenter: IFeedPresnter {
         return items.count
     }
     
-    func itemForRowIndexPath(indexPath: IndexPath, imageResult: @escaping (UIImage?) -> Void) -> Article {
+    func itemForRowIndexPath(indexPath: IndexPath, imageResult: @escaping (UIImage?, IndexPath) -> Void) -> Article {
         let item = items[indexPath.row]
         if let string = item.urlToImage, let url = URL(string: string) {
-           let task = self.networkManager.loadImage(url: url, completion: imageResult)
+           let task = self.networkManager.loadImage(url: url, completion: { image in
+                imageResult(image, indexPath)
+           })
             self.imageDownloadTasks[indexPath.row] = task
         } else {
-            imageResult(nil)
+            imageResult(nil, indexPath)
         }
         
         
@@ -53,6 +55,7 @@ class FeedPresenter: IFeedPresnter {
     func onUpdateBuutonTapEvent() {
         networkManager.loadData { [weak self] (articles) in
             self?.items = articles
+            // TODO: clean map wiyh tasks
             DispatchQueue.main.async {
                 self?.view?.updateView()
             }

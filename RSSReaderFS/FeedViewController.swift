@@ -35,9 +35,12 @@ extension FeedViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NewsCell") as! NewsCell
-        let item = presenter.itemForRowIndexPath(indexPath: indexPath, imageResult: { pics in
+        cell.pictureView.image = nil
+        let item = presenter.itemForRowIndexPath(indexPath: indexPath, imageResult: { pic, sourceIndexPath in
             DispatchQueue.main.async {
-                cell.pictureView?.image = pics
+                if let indexPath = tableView.indexPath(for: cell), indexPath.row == sourceIndexPath.row {
+                    cell.pictureView?.image = pic
+                }
             }
         })
         cell.configureWith(article: item)
@@ -47,6 +50,9 @@ extension FeedViewController: UITableViewDataSource {
 }
 
 extension FeedViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        presenter.cancelImageDownload(indexPath: indexPath)
+    }
     
 }
 
