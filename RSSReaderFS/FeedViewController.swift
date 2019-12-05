@@ -11,7 +11,7 @@ import UIKit
 class FeedViewController: UIViewController {
 
     
-    private lazy var presenter: IFeddPresnter = {
+    private lazy var presenter: IFeedPresnter = {
         return FeedPresenter(view: self)
     }()
     
@@ -45,6 +45,11 @@ extension FeedViewController: UITableViewDataSource {
         return cell
     }
 }
+
+extension FeedViewController: UITableViewDelegate {
+    
+}
+
 
 extension FeedViewController: IFeedView {
     func setupInitialState() {

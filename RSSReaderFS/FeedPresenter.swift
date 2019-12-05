@@ -9,12 +9,13 @@
 import Foundation
 import UIKit
 
-class FeedPresenter: IFeddPresnter {
+class FeedPresenter: IFeedPresnter {
 
     
     private weak var view: IFeedView?
     
     private var items: [Article] = []
+    private var imageDownloadTasks = [Int: URLSessionDownloadTask]()
     
     private var networkManager = NetworkManager()
     
@@ -33,13 +34,20 @@ class FeedPresenter: IFeddPresnter {
     func itemForRowIndexPath(indexPath: IndexPath, imageResult: @escaping (UIImage?) -> Void) -> Article {
         let item = items[indexPath.row]
         if let string = item.urlToImage, let url = URL(string: string) {
-            self.networkManager.loadImage(url: url, completion: imageResult)
+           let task = self.networkManager.loadImage(url: url, completion: imageResult)
+            self.imageDownloadTasks[indexPath.row] = task
         } else {
             imageResult(nil)
         }
         
         
         return item
+    }
+    
+    func cancelImageDownload(indexPath: IndexPath) {
+        let task = self.imageDownloadTasks[indexPath.row]
+        task?.cancel()
+        self.imageDownloadTasks[indexPath.row] = nil
     }
     
     func onUpdateBuutonTapEvent() {

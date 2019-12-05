@@ -28,7 +28,7 @@ class NetworkManager {
         task.resume()
     }
     
-    func loadImage(url: URL, completion: @escaping (UIImage) -> Void) {
+    func loadImage(url: URL, completion: @escaping (UIImage) -> Void) -> URLSessionDownloadTask {
         
         let task = session.downloadTask(with: url) { (url, response, error) in
             
@@ -41,6 +41,7 @@ class NetworkManager {
         }
         
         task.resume()
+        return task
         }
 }
 
