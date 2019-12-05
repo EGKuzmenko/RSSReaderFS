@@ -15,7 +15,7 @@ class FeedPresenter: IFeedPresnter {
     private weak var view: IFeedView?
     
     private var items: [Article] = []
-    private var imageDownloadTasks = [Int: URLSessionDownloadTask]()
+//    private var imageDownloadTasks = [Int: URLSessionDownloadTask]()
     
     private var networkManager = NetworkManager()
     
@@ -34,8 +34,9 @@ class FeedPresenter: IFeedPresnter {
     func itemForRowIndexPath(indexPath: IndexPath, imageResult: @escaping (UIImage?) -> Void) -> Article {
         let item = items[indexPath.row]
         if let string = item.urlToImage, let url = URL(string: string) {
-           let task = self.networkManager.loadImage(url: url, completion: imageResult)
-            self.imageDownloadTasks[indexPath.row] = task
+//           let task = self.networkManager.loadImage(url: url, completion: imageResult)
+//            self.imageDownloadTasks[indexPath.row] = task
+            self.networkManager.loadImage(url: url, completion: imageResult)
         } else {
             imageResult(nil)
         }
@@ -43,12 +44,12 @@ class FeedPresenter: IFeedPresnter {
         
         return item
     }
-    
-    func cancelImageDownload(indexPath: IndexPath) {
-        let task = self.imageDownloadTasks[indexPath.row]
-        task?.cancel()
-        self.imageDownloadTasks[indexPath.row] = nil
-    }
+//    
+//    func cancelImageDownload(indexPath: IndexPath) {
+//        let task = self.imageDownloadTasks[indexPath.row]
+//        task?.cancel()
+//        self.imageDownloadTasks[indexPath.row] = nil
+//    }
     
     func onUpdateBuutonTapEvent() {
         networkManager.loadData { [weak self] (articles) in
