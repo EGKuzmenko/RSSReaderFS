@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C923F57C239A5266008A9AE0 /* INetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C923F57B239A5266008A9AE0 /* INetworkManager.swift */; };
+		C923F57F239A53FB008A9AE0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C923F57E239A53FB008A9AE0 /* User.swift */; };
 		C9266FD9238FF12700FA2E16 /* IFeedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9266FD8238FF12700FA2E16 /* IFeedPresenter.swift */; };
 		C9266FDB238FF28500FA2E16 /* IFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9266FDA238FF28500FA2E16 /* IFeedView.swift */; };
 		C9266FDD238FF4E700FA2E16 /* FeedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9266FDC238FF4E700FA2E16 /* FeedPresenter.swift */; };
@@ -28,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		C923F57B239A5266008A9AE0 /* INetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INetworkManager.swift; sourceTree = "<group>"; };
+		C923F57E239A53FB008A9AE0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C9266FD8238FF12700FA2E16 /* IFeedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IFeedPresenter.swift; sourceTree = "<group>"; };
 		C9266FDA238FF28500FA2E16 /* IFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IFeedView.swift; sourceTree = "<group>"; };
 		C9266FDC238FF4E700FA2E16 /* FeedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPresenter.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				C9B016862392229D00E87634 /* News.swift */,
+				C923F57E239A53FB008A9AE0 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				C9D3179023992B2300AA6F62 /* URLFactory.swift in Sources */,
 				C94DEE50238C3F5900708074 /* FeedViewController.swift in Sources */,
 				C94DEE4C238C3F5900708074 /* AppDelegate.swift in Sources */,
+				C923F57F239A53FB008A9AE0 /* User.swift in Sources */,
 				C9D5DAED238FB9AB00583F2A /* NewsCell.swift in Sources */,
 				C9B016872392229D00E87634 /* News.swift in Sources */,
 				C9B0168B23923F9700E87634 /* DateFormater+ISO8601.swift in Sources */,
