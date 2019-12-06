@@ -86,15 +86,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		C923F583239A59EC008A9AE0 /* Storyboards */ = {
-			isa = PBXGroup;
-			children = (
-				C94DEE56238C3F5900708074 /* LaunchScreen.storyboard */,
-				C94DEE51238C3F5900708074 /* Main.storyboard */,
-			);
-			path = Storyboards;
-			sourceTree = "<group>";
-		};
 		C923F584239A59FD008A9AE0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +111,15 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
+		C923F588239A5CBD008A9AE0 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				C94DEE51238C3F5900708074 /* Main.storyboard */,
+				C94DEE56238C3F5900708074 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		C94DEE3F238C3F5900708074 = {
 			isa = PBXGroup;
 			children = (
@@ -139,10 +139,10 @@
 		C94DEE4A238C3F5900708074 /* RSSReaderFS */ = {
 			isa = PBXGroup;
 			children = (
+				C923F588239A5CBD008A9AE0 /* Storyboards */,
 				C923F586239A5A2A008A9AE0 /* Networking */,
 				C923F585239A5A20008A9AE0 /* Extensions */,
 				C923F584239A59FD008A9AE0 /* Models */,
-				C923F583239A59EC008A9AE0 /* Storyboards */,
 				C923F582239A59AA008A9AE0 /* Views */,
 				C923F581239A5998008A9AE0 /* Presenters */,
 				C923F580239A5986008A9AE0 /* Application */,
