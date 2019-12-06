@@ -37,6 +37,7 @@ extension FeedViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NewsCell") as! NewsCell
         let item = presenter.itemForRowIndexPath(indexPath: indexPath, imageResult: { pics in
             DispatchQueue.main.async {
+                cell.prepareForReuse()
                 cell.pictureView?.image = pics
             }
         })

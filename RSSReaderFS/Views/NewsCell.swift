@@ -20,4 +20,10 @@ class NewsCell: UITableViewCell {
         newsLabel.text = article.articleDescription
         dateLabel.text = RSSDateFormater.string(from: article.publishedAt)
     }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        pictureView.image = nil
+    }
 }
