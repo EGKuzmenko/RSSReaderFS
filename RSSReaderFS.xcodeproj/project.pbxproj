@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C923F57C239A5266008A9AE0 /* INetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C923F57B239A5266008A9AE0 /* INetworkManager.swift */; };
 		C9266FD9238FF12700FA2E16 /* IFeedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9266FD8238FF12700FA2E16 /* IFeedPresenter.swift */; };
 		C9266FDB238FF28500FA2E16 /* IFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9266FDA238FF28500FA2E16 /* IFeedView.swift */; };
 		C9266FDD238FF4E700FA2E16 /* FeedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9266FDC238FF4E700FA2E16 /* FeedPresenter.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C923F57B239A5266008A9AE0 /* INetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INetworkManager.swift; sourceTree = "<group>"; };
 		C9266FD8238FF12700FA2E16 /* IFeedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IFeedPresenter.swift; sourceTree = "<group>"; };
 		C9266FDA238FF28500FA2E16 /* IFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IFeedView.swift; sourceTree = "<group>"; };
 		C9266FDC238FF4E700FA2E16 /* FeedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPresenter.swift; sourceTree = "<group>"; };
@@ -57,6 +59,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C923F57D239A5280008A9AE0 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				C94DEE4B238C3F5900708074 /* AppDelegate.swift */,
+				C94DEE4D238C3F5900708074 /* SceneDelegate.swift */,
+				C94DEE59238C3F5900708074 /* Info.plist */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
 		C94DEE3F238C3F5900708074 = {
 			isa = PBXGroup;
 			children = (
@@ -76,12 +88,12 @@
 		C94DEE4A238C3F5900708074 /* RSSReaderFS */ = {
 			isa = PBXGroup;
 			children = (
+				C923F57D239A5280008A9AE0 /* Application */,
 				C9D3179A2399388C00AA6F62 /* Extensions */,
 				C9D317922399363700AA6F62 /* Storyboards */,
 				C9D31794239936AD00AA6F62 /* Presenters */,
 				C9D317952399378B00AA6F62 /* Views */,
 				C9D31796239937CA00AA6F62 /* Models */,
-				C9D317972399380A00AA6F62 /* Application */,
 				C9D317982399382C00AA6F62 /* Resources */,
 				C9D317992399383B00AA6F62 /* Networking */,
 				C9D5DAEA238FB8D700583F2A /* NewsCell.xib */,
@@ -127,16 +139,6 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		C9D317972399380A00AA6F62 /* Application */ = {
-			isa = PBXGroup;
-			children = (
-				C94DEE4B238C3F5900708074 /* AppDelegate.swift */,
-				C94DEE4D238C3F5900708074 /* SceneDelegate.swift */,
-				C94DEE59238C3F5900708074 /* Info.plist */,
-			);
-			path = Application;
-			sourceTree = "<group>";
-		};
 		C9D317982399382C00AA6F62 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +152,7 @@
 			children = (
 				C9B016882392244100E87634 /* NetworkManager.swift */,
 				C9D3178F23992B2300AA6F62 /* URLFactory.swift */,
+				C923F57B239A5266008A9AE0 /* INetworkManager.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 			files = (
 				C9B016892392244100E87634 /* NetworkManager.swift in Sources */,
 				C9266FDB238FF28500FA2E16 /* IFeedView.swift in Sources */,
+				C923F57C239A5266008A9AE0 /* INetworkManager.swift in Sources */,
 				C9D3179023992B2300AA6F62 /* URLFactory.swift in Sources */,
 				C94DEE50238C3F5900708074 /* FeedViewController.swift in Sources */,
 				C94DEE4C238C3F5900708074 /* AppDelegate.swift in Sources */,
@@ -390,7 +394,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = RSSReaderFS/Application/Info.plist;
+				INFOPLIST_FILE = RSSReaderFS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -407,7 +411,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = RSSReaderFS/Application/Info.plist;
+				INFOPLIST_FILE = RSSReaderFS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

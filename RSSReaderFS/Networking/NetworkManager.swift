@@ -9,7 +9,7 @@
 import Foundation
 import class UIKit.UIImage
 
-class NetworkManager {
+class NetworkManager: INetworkManager {
     private let session: URLSession = URLSession.shared
     
     func loadData(completion: @escaping ([Article]) -> Void) {
