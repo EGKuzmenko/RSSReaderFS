@@ -11,5 +11,5 @@ import Foundation
 protocol ILoginPresneter: AnyObject {
     func onViewReadyEvent()
     func onSigninButtonTapEvent(userLogin: String?, userPassword: String?)
-    func onSignupButtonTapEvent()
+    func onSignupButtonTapEvent(userLogin: String?, userPassword: String?)
 }
