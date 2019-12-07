@@ -16,8 +16,18 @@
 		C94DEE53238C3F5900708074 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C94DEE51238C3F5900708074 /* Main.storyboard */; };
 		C94DEE55238C3F5900708074 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C94DEE54238C3F5900708074 /* Assets.xcassets */; };
 		C94DEE58238C3F5900708074 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C94DEE56238C3F5900708074 /* LaunchScreen.storyboard */; };
+		C9643F16239B7EE0005AC5FD /* User+Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9643F15239B7EE0005AC5FD /* User+Conversion.swift */; };
 		C9ABE690239B55F30050312B /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9ABE68F239B55F30050312B /* Login.storyboard */; };
 		C9ABE692239B568B0050312B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9ABE691239B568B0050312B /* LoginViewController.swift */; };
+		C9ABE694239B58DA0050312B /* ILoginPresneter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9ABE693239B58DA0050312B /* ILoginPresneter.swift */; };
+		C9ABE698239B592A0050312B /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9ABE697239B592A0050312B /* LoginPresenter.swift */; };
+		C9ABE69A239B5A870050312B /* ILoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9ABE699239B5A870050312B /* ILoginView.swift */; };
+		C9ABE69C239B5BE30050312B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9ABE69B239B5BE30050312B /* User.swift */; };
+		C9ABE6A2239B64D00050312B /* CacheService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9ABE6A1239B64D00050312B /* CacheService.swift */; };
+		C9ABE6A4239B65060050312B /* ICacheService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9ABE6A3239B65060050312B /* ICacheService.swift */; };
+		C9ABE6A7239B69B00050312B /* RSSReaderDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C9ABE6A5239B69B00050312B /* RSSReaderDataModel.xcdatamodeld */; };
+		C9ABE6AA239B69D60050312B /* UserMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9ABE6A8239B69D60050312B /* UserMO+CoreDataClass.swift */; };
+		C9ABE6AB239B69D60050312B /* UserMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9ABE6A9239B69D60050312B /* UserMO+CoreDataProperties.swift */; };
 		C9B016872392229D00E87634 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B016862392229D00E87634 /* News.swift */; };
 		C9B016892392244100E87634 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B016882392244100E87634 /* NetworkManager.swift */; };
 		C9B0168B23923F9700E87634 /* DateFormater+ISO8601.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B0168A23923F9700E87634 /* DateFormater+ISO8601.swift */; };
@@ -39,8 +49,18 @@
 		C94DEE54238C3F5900708074 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C94DEE57238C3F5900708074 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C94DEE59238C3F5900708074 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9643F15239B7EE0005AC5FD /* User+Conversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+Conversion.swift"; sourceTree = "<group>"; };
 		C9ABE68F239B55F30050312B /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		C9ABE691239B568B0050312B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C9ABE693239B58DA0050312B /* ILoginPresneter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ILoginPresneter.swift; sourceTree = "<group>"; };
+		C9ABE697239B592A0050312B /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		C9ABE699239B5A870050312B /* ILoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ILoginView.swift; sourceTree = "<group>"; };
+		C9ABE69B239B5BE30050312B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C9ABE6A1239B64D00050312B /* CacheService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheService.swift; sourceTree = "<group>"; };
+		C9ABE6A3239B65060050312B /* ICacheService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICacheService.swift; sourceTree = "<group>"; };
+		C9ABE6A6239B69B00050312B /* RSSReaderDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RSSReaderDataModel.xcdatamodel; sourceTree = "<group>"; };
+		C9ABE6A8239B69D60050312B /* UserMO+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserMO+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C9ABE6A9239B69D60050312B /* UserMO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		C9B016862392229D00E87634 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		C9B016882392244100E87634 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		C9B0168A23923F9700E87634 /* DateFormater+ISO8601.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormater+ISO8601.swift"; sourceTree = "<group>"; };
@@ -76,6 +96,8 @@
 			children = (
 				C9266FD8238FF12700FA2E16 /* IFeedPresnter.swift */,
 				C9266FDC238FF4E700FA2E16 /* FeedPresenter.swift */,
+				C9ABE693239B58DA0050312B /* ILoginPresneter.swift */,
+				C9ABE697239B592A0050312B /* LoginPresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -87,6 +109,7 @@
 				C9266FDA238FF28500FA2E16 /* IFeedView.swift */,
 				C94DEE4F238C3F5900708074 /* FeedViewController.swift */,
 				C9ABE691239B568B0050312B /* LoginViewController.swift */,
+				C9ABE699239B5A870050312B /* ILoginView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -95,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				C9B016862392229D00E87634 /* News.swift */,
+				C9ABE69B239B5BE30050312B /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -145,6 +169,7 @@
 		C94DEE4A238C3F5900708074 /* RSSReaderFS */ = {
 			isa = PBXGroup;
 			children = (
+				C9ABE69D239B5E4E0050312B /* Caches */,
 				C923F588239A5CBD008A9AE0 /* Storyboards */,
 				C923F586239A5A2A008A9AE0 /* Networking */,
 				C923F585239A5A20008A9AE0 /* Extensions */,
@@ -157,6 +182,19 @@
 				C9B448432392438800263559 /* RSSDateFormater.swift */,
 			);
 			path = RSSReaderFS;
+			sourceTree = "<group>";
+		};
+		C9ABE69D239B5E4E0050312B /* Caches */ = {
+			isa = PBXGroup;
+			children = (
+				C9ABE6A8239B69D60050312B /* UserMO+CoreDataClass.swift */,
+				C9ABE6A9239B69D60050312B /* UserMO+CoreDataProperties.swift */,
+				C9ABE6A1239B64D00050312B /* CacheService.swift */,
+				C9ABE6A3239B65060050312B /* ICacheService.swift */,
+				C9ABE6A5239B69B00050312B /* RSSReaderDataModel.xcdatamodeld */,
+				C9643F15239B7EE0005AC5FD /* User+Conversion.swift */,
+			);
+			path = Caches;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,15 +271,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9B016892392244100E87634 /* NetworkManager.swift in Sources */,
+				C9ABE6A7239B69B00050312B /* RSSReaderDataModel.xcdatamodeld in Sources */,
 				C9266FDB238FF28500FA2E16 /* IFeedView.swift in Sources */,
 				C9D3179023992B2300AA6F62 /* URLFactory.swift in Sources */,
+				C9ABE6AB239B69D60050312B /* UserMO+CoreDataProperties.swift in Sources */,
 				C94DEE50238C3F5900708074 /* FeedViewController.swift in Sources */,
+				C9ABE6AA239B69D60050312B /* UserMO+CoreDataClass.swift in Sources */,
 				C94DEE4C238C3F5900708074 /* AppDelegate.swift in Sources */,
 				C9D5DAED238FB9AB00583F2A /* NewsCell.swift in Sources */,
 				C9B016872392229D00E87634 /* News.swift in Sources */,
+				C9ABE69C239B5BE30050312B /* User.swift in Sources */,
 				C9B0168B23923F9700E87634 /* DateFormater+ISO8601.swift in Sources */,
+				C9ABE69A239B5A870050312B /* ILoginView.swift in Sources */,
 				C94DEE4E238C3F5900708074 /* SceneDelegate.swift in Sources */,
+				C9ABE6A4239B65060050312B /* ICacheService.swift in Sources */,
+				C9ABE698239B592A0050312B /* LoginPresenter.swift in Sources */,
 				C9B448442392438800263559 /* RSSDateFormater.swift in Sources */,
+				C9643F16239B7EE0005AC5FD /* User+Conversion.swift in Sources */,
+				C9ABE6A2239B64D00050312B /* CacheService.swift in Sources */,
+				C9ABE694239B58DA0050312B /* ILoginPresneter.swift in Sources */,
 				C9266FDD238FF4E700FA2E16 /* FeedPresenter.swift in Sources */,
 				C9ABE692239B568B0050312B /* LoginViewController.swift in Sources */,
 				C9266FD9238FF12700FA2E16 /* IFeedPresnter.swift in Sources */,
@@ -440,6 +488,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C9ABE6A5239B69B00050312B /* RSSReaderDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C9ABE6A6239B69B00050312B /* RSSReaderDataModel.xcdatamodel */,
+			);
+			currentVersion = C9ABE6A6239B69B00050312B /* RSSReaderDataModel.xcdatamodel */;
+			path = RSSReaderDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C94DEE40238C3F5900708074 /* Project object */;
 }
