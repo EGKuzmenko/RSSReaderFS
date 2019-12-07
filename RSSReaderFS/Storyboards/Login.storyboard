@@ -26,19 +26,20 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="86d-Ix-Eb5">
-                                <rect key="frame" x="122" y="352" width="42" height="30"/>
+                                <rect key="frame" x="120" y="352" width="47" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Log in"/>
+                                <state key="normal" title="Sign in"/>
                                 <connections>
                                     <action selector="onLoginButtonTap:" destination="7lm-jD-CrR" eventType="touchUpInside" id="GaX-8P-GGp"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mg7-Un-9dp">
-                                <rect key="frame" x="248" y="352" width="47" height="30"/>
+                                <rect key="frame" x="246" y="352" width="52" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Sign in"/>
+                                <state key="normal" title="Sign up"/>
                                 <connections>
                                     <action selector="onSigninButtonTap:" destination="7lm-jD-CrR" eventType="touchUpInside" id="Zio-n0-LnV"/>
+                                    <action selector="onSignupButtonTap:" destination="7lm-jD-CrR" eventType="touchUpInside" id="Dfa-eb-eGE"/>
                                 </connections>
                             </button>
                         </subviews>
