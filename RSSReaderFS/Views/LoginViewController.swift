@@ -9,18 +9,30 @@
 import UIKit
 
 class LoginViewController: UIViewController {
+    
+    private lazy var presenter: ILoginPresneter = {
+        return LoginPresenter(view: self)
+    }()
 
     @IBOutlet weak var loginTextField: UITextField!
+    
     @IBOutlet weak var passwordTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
-    @IBAction func onLoginButtonTap(_ sender: UIButton) {
+    
+    @IBAction func onSigninButtonTap(_ sender: UIButton) {
         
     }
-    @IBAction func onSigninButtonTap(_ sender: UIButton) {
+    
+    @IBAction func onSignupButtonTap(_ sender: UIButton) {
+        
+    }
+}
+
+extension LoginViewController: ILoginView {
+    func setupInitialState() {
         
     }
 }
