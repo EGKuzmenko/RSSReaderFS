@@ -20,7 +20,7 @@ extension UserMO {
 
 extension User {
     init(_ user: UserMO) {
-        self.login = user.login
-        self.password = user.password
+        self.login = user.login!
+        self.password = user.password!
     }
 }

@@ -51,10 +51,12 @@ extension CacheService: ICacheService {
         fetchRequest.predicate = NSPredicate(format: "login = %@ AND password = %@", login, password)
         
         do {
-            guard let results = try context.fetch(fetchRequest) as? [UserMO], let user = results.first else {
+            guard let results = try context.fetch(fetchRequest) as? [UserMO] else {
                 assertionFailure("Can't cast to UserMO.")
                 return nil
             }
+            
+            guard let user = results.first else { return nil }
             return User(user)
         } catch {
             assertionFailure("Can't obtain user from Database")

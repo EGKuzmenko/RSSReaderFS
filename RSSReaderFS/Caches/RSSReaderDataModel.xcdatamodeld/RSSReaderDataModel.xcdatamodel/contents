@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15400" systemVersion="18G95" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Article" representedClassName="ArticleMO" syncable="YES">
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="articles" inverseEntity="User"/>
+    </entity>
     <entity name="User" representedClassName="UserMO" syncable="YES">
         <attribute name="login" attributeType="String"/>
         <attribute name="password" attributeType="String"/>
+        <relationship name="articles" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Article" inverseName="user" inverseEntity="Article"/>
     </entity>
     <elements>
-        <element name="User" positionX="-63" positionY="-18" width="128" height="73"/>
+        <element name="User" positionX="-63" positionY="-18" width="128" height="88"/>
+        <element name="Article" positionX="-54" positionY="9" width="128" height="58"/>
     </elements>
 </model>

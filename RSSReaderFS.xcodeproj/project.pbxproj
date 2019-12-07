@@ -17,6 +17,8 @@
 		C94DEE55238C3F5900708074 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C94DEE54238C3F5900708074 /* Assets.xcassets */; };
 		C94DEE58238C3F5900708074 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C94DEE56238C3F5900708074 /* LaunchScreen.storyboard */; };
 		C9643F16239B7EE0005AC5FD /* User+Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9643F15239B7EE0005AC5FD /* User+Conversion.swift */; };
+		C9643F19239B89C0005AC5FD /* ArticleMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9643F17239B89C0005AC5FD /* ArticleMO+CoreDataClass.swift */; };
+		C9643F1A239B89C0005AC5FD /* ArticleMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9643F18239B89C0005AC5FD /* ArticleMO+CoreDataProperties.swift */; };
 		C9ABE690239B55F30050312B /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9ABE68F239B55F30050312B /* Login.storyboard */; };
 		C9ABE692239B568B0050312B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9ABE691239B568B0050312B /* LoginViewController.swift */; };
 		C9ABE694239B58DA0050312B /* ILoginPresneter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9ABE693239B58DA0050312B /* ILoginPresneter.swift */; };
@@ -50,6 +52,8 @@
 		C94DEE57238C3F5900708074 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C94DEE59238C3F5900708074 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9643F15239B7EE0005AC5FD /* User+Conversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+Conversion.swift"; sourceTree = "<group>"; };
+		C9643F17239B89C0005AC5FD /* ArticleMO+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArticleMO+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C9643F18239B89C0005AC5FD /* ArticleMO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArticleMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		C9ABE68F239B55F30050312B /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		C9ABE691239B568B0050312B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C9ABE693239B58DA0050312B /* ILoginPresneter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ILoginPresneter.swift; sourceTree = "<group>"; };
@@ -187,6 +191,8 @@
 		C9ABE69D239B5E4E0050312B /* Caches */ = {
 			isa = PBXGroup;
 			children = (
+				C9643F17239B89C0005AC5FD /* ArticleMO+CoreDataClass.swift */,
+				C9643F18239B89C0005AC5FD /* ArticleMO+CoreDataProperties.swift */,
 				C9ABE6A8239B69D60050312B /* UserMO+CoreDataClass.swift */,
 				C9ABE6A9239B69D60050312B /* UserMO+CoreDataProperties.swift */,
 				C9ABE6A1239B64D00050312B /* CacheService.swift */,
@@ -274,12 +280,14 @@
 				C9ABE6A7239B69B00050312B /* RSSReaderDataModel.xcdatamodeld in Sources */,
 				C9266FDB238FF28500FA2E16 /* IFeedView.swift in Sources */,
 				C9D3179023992B2300AA6F62 /* URLFactory.swift in Sources */,
+				C9643F19239B89C0005AC5FD /* ArticleMO+CoreDataClass.swift in Sources */,
 				C9ABE6AB239B69D60050312B /* UserMO+CoreDataProperties.swift in Sources */,
 				C94DEE50238C3F5900708074 /* FeedViewController.swift in Sources */,
 				C9ABE6AA239B69D60050312B /* UserMO+CoreDataClass.swift in Sources */,
 				C94DEE4C238C3F5900708074 /* AppDelegate.swift in Sources */,
 				C9D5DAED238FB9AB00583F2A /* NewsCell.swift in Sources */,
 				C9B016872392229D00E87634 /* News.swift in Sources */,
+				C9643F1A239B89C0005AC5FD /* ArticleMO+CoreDataProperties.swift in Sources */,
 				C9ABE69C239B5BE30050312B /* User.swift in Sources */,
 				C9B0168B23923F9700E87634 /* DateFormater+ISO8601.swift in Sources */,
 				C9ABE69A239B5A870050312B /* ILoginView.swift in Sources */,

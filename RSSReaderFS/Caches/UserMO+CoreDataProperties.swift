@@ -17,7 +17,25 @@ extension UserMO {
         return NSFetchRequest<UserMO>(entityName: "User")
     }
 
-    @NSManaged public var login: String!
-    @NSManaged public var password: String!
+    @NSManaged public var login: String?
+    @NSManaged public var password: String?
+    @NSManaged public var articles: NSSet?
+
+}
+
+// MARK: Generated accessors for articles
+extension UserMO {
+
+    @objc(addArticlesObject:)
+    @NSManaged public func addToArticles(_ value: ArticleMO)
+
+    @objc(removeArticlesObject:)
+    @NSManaged public func removeFromArticles(_ value: ArticleMO)
+
+    @objc(addArticles:)
+    @NSManaged public func addToArticles(_ values: NSSet)
+
+    @objc(removeArticles:)
+    @NSManaged public func removeFromArticles(_ values: NSSet)
 
 }
