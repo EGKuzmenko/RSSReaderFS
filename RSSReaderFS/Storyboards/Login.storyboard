@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7lm-jD-CrR">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="Dp6-od-UZq">
+            <objects>
+                <viewController id="7lm-jD-CrR" customClass="LoginViewController" customModule="RSSReaderFS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nuJ-lW-BwW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xem-rF-WkA">
+                                <rect key="frame" x="120" y="194" width="174" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xOl-W9-bzS">
+                                <rect key="frame" x="120" y="248" width="174" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="86d-Ix-Eb5">
+                                <rect key="frame" x="122" y="352" width="42" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Log in"/>
+                                <connections>
+                                    <action selector="onLoginButtonTap:" destination="7lm-jD-CrR" eventType="touchUpInside" id="GaX-8P-GGp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mg7-Un-9dp">
+                                <rect key="frame" x="248" y="352" width="47" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Sign in"/>
+                                <connections>
+                                    <action selector="onSigninButtonTap:" destination="7lm-jD-CrR" eventType="touchUpInside" id="Zio-n0-LnV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="anf-xZ-P3u" firstAttribute="trailing" secondItem="Xem-rF-WkA" secondAttribute="trailing" constant="120" id="1Nf-BQ-20g"/>
+                            <constraint firstItem="anf-xZ-P3u" firstAttribute="trailing" secondItem="xOl-W9-bzS" secondAttribute="trailing" constant="120" id="6pI-ck-c1h"/>
+                            <constraint firstItem="Xem-rF-WkA" firstAttribute="leading" secondItem="anf-xZ-P3u" secondAttribute="leading" constant="120" id="M05-1x-6lr"/>
+                            <constraint firstItem="Xem-rF-WkA" firstAttribute="top" secondItem="anf-xZ-P3u" secondAttribute="top" constant="150" id="hyk-kx-vvn"/>
+                            <constraint firstItem="xOl-W9-bzS" firstAttribute="top" secondItem="Xem-rF-WkA" secondAttribute="bottom" constant="20" id="taK-8F-vxx"/>
+                            <constraint firstItem="xOl-W9-bzS" firstAttribute="leading" secondItem="anf-xZ-P3u" secondAttribute="leading" constant="120" id="woZ-3f-7fn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="anf-xZ-P3u"/>
+                    </view>
+                    <connections>
+                        <outlet property="loginTextField" destination="Xem-rF-WkA" id="Har-GZ-s8H"/>
+                        <outlet property="passwordTextField" destination="xOl-W9-bzS" id="OJm-Em-t7a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OiS-Vf-ncr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="97" y="112"/>
+        </scene>
+    </scenes>
+</document>
