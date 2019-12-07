@@ -23,16 +23,30 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func onSigninButtonTap(_ sender: UIButton) {
-        
+        presenter.onSigninButtonTapEvent(userLogin: loginTextField.text, userPassword: passwordTextField.text)
     }
     
     @IBAction func onSignupButtonTap(_ sender: UIButton) {
-        
+        presenter.onSignupButtonTapEvent(userLogin: loginTextField.text, userPassword: passwordTextField.text)
     }
 }
 
 extension LoginViewController: ILoginView {
     func setupInitialState() {
         
+    }
+    
+    func showWrongAlert() {
+        let alert = UIAlertController(title: "Alert", message: "This user is not registered", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .cancel))
+        self.present(alert, animated: true)
+    }
+    
+    func showMainStoryboard() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(identifier: "FeedViewController") as! FeedViewController
+        guard let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene else {
+            return }
+        scene.windows.first?.rootViewController = UINavigationController(rootViewController: vc)
     }
 }

@@ -30,7 +30,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sign in"/>
                                 <connections>
-                                    <action selector="onLoginButtonTap:" destination="7lm-jD-CrR" eventType="touchUpInside" id="GaX-8P-GGp"/>
+                                    <action selector="onSigninButtonTap:" destination="7lm-jD-CrR" eventType="touchUpInside" id="VId-MY-9TG"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mg7-Un-9dp">
@@ -38,8 +38,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sign up"/>
                                 <connections>
-                                    <action selector="onSigninButtonTap:" destination="7lm-jD-CrR" eventType="touchUpInside" id="Zio-n0-LnV"/>
-                                    <action selector="onSignupButtonTap:" destination="7lm-jD-CrR" eventType="touchUpInside" id="Dfa-eb-eGE"/>
+                                    <action selector="onSignupButtonTap:" destination="7lm-jD-CrR" eventType="touchUpInside" id="shZ-DU-LG9"/>
                                 </connections>
                             </button>
                         </subviews>

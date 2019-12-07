@@ -12,6 +12,8 @@ class LoginPresenter: ILoginPresneter {
     
     private weak var view :ILoginView?
     
+    private let cacheService: ICacheService = CacheService()
+    
     init(view: ILoginView?) {
         self.view = view
     }
@@ -21,11 +23,25 @@ class LoginPresenter: ILoginPresneter {
     }
     
     func onSigninButtonTapEvent(userLogin: String?, userPassword: String?) {
+        guard let userLogin = userLogin, let userPassword = userPassword else {
+            return
+        }
         
+        if let user = cacheService.search(login: userLogin, password: userPassword) {
+            view?.showMainStoryboard()
+        } else {
+            view?.showWrongAlert()
+        }
     }
     
-    func onSignupButtonTapEvent() {
+    func onSignupButtonTapEvent(userLogin: String?, userPassword: String?) {
+        guard let userLogin = userLogin, let userPassword = userPassword else {
+            return
+        }
         
+        let user = User(login: userLogin, password: userPassword)
+        
+        cacheService.cacheUser(user: user)
     }
     
 }

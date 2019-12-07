@@ -10,4 +10,6 @@ import Foundation
 
 protocol ILoginView: AnyObject {
     func setupInitialState()
+    func showWrongAlert()
+    func showMainStoryboard()
 }
