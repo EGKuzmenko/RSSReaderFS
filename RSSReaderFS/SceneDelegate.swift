@@ -14,18 +14,27 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        
-        let favoriteNewsStoryboard = UIStoryboard(name: "FavoriteNews", bundle: nil)
-        
-        let feedViewController = mainStoryboard.instantiateViewController(withIdentifier: "FeedViewController") as! FeedViewController
-        let favoriteNewsViewController = favoriteNewsStoryboard.instantiateViewController(withIdentifier: "FavoriteNewsViewController") as! FavoriteNewsViewController
-        
-        let tabBarController = UITabBarController()
-        tabBarController.viewControllers = [feedViewController, favoriteNewsViewController]
         guard let _ = (scene as? UIWindowScene) else { return }
-        window?.rootViewController = tabBarController
-        window?.makeKeyAndVisible()
+
+        if !UserDefaults.standard.bool(forKey: "flag") {
+            let storyboard = UIStoryboard(name: "Login", bundle: nil)
+            let loginViewController = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+            window?.rootViewController = loginViewController
+            window?.makeKeyAndVisible()
+        } else {
+            let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            
+            let favoriteNewsStoryboard = UIStoryboard(name: "FavoriteNews", bundle: nil)
+            
+            let feedViewController = mainStoryboard.instantiateViewController(withIdentifier: "FeedViewController") as! FeedViewController
+            let favoriteNewsViewController = favoriteNewsStoryboard.instantiateViewController(withIdentifier: "FavoriteNewsViewController") as! FavoriteNewsViewController
+            
+            let tabBarController = UITabBarController()
+            tabBarController.viewControllers = [feedViewController, favoriteNewsViewController]
+            window?.rootViewController = tabBarController
+            window?.makeKeyAndVisible()
+        }
+        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

@@ -10,7 +10,7 @@
         <!--Login View Controller-->
         <scene sceneID="Dp6-od-UZq">
             <objects>
-                <viewController id="7lm-jD-CrR" customClass="LoginViewController" customModule="RSSReaderFS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="7lm-jD-CrR" customClass="LoginViewController" customModule="RSSReaderFS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nuJ-lW-BwW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -14,6 +14,8 @@ class LoginPresenter: ILoginPresneter {
     
     private let cacheService: ICacheService = CacheService()
     
+    private let defaults = UserDefaults.standard
+    
     init(view: ILoginView?) {
         self.view = view
     }
@@ -29,6 +31,7 @@ class LoginPresenter: ILoginPresneter {
         
         if let user = cacheService.search(login: userLogin, password: userPassword) {
             view?.showMainStoryboard()
+            defaults.set(true, forKey: "flag")
         } else {
             view?.showWrongAlert()
         }
