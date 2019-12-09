@@ -10,6 +10,7 @@
 		C9266FD9238FF12700FA2E16 /* IFeedPresnter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9266FD8238FF12700FA2E16 /* IFeedPresnter.swift */; };
 		C9266FDB238FF28500FA2E16 /* IFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9266FDA238FF28500FA2E16 /* IFeedView.swift */; };
 		C9266FDD238FF4E700FA2E16 /* FeedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9266FDC238FF4E700FA2E16 /* FeedPresenter.swift */; };
+		C93752B1239E14A200077FE6 /* Article+Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93752B0239E14A200077FE6 /* Article+Conversion.swift */; };
 		C94DEE4C238C3F5900708074 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94DEE4B238C3F5900708074 /* AppDelegate.swift */; };
 		C94DEE4E238C3F5900708074 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94DEE4D238C3F5900708074 /* SceneDelegate.swift */; };
 		C94DEE50238C3F5900708074 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94DEE4F238C3F5900708074 /* FeedViewController.swift */; };
@@ -43,6 +44,7 @@
 		C9266FD8238FF12700FA2E16 /* IFeedPresnter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IFeedPresnter.swift; sourceTree = "<group>"; };
 		C9266FDA238FF28500FA2E16 /* IFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IFeedView.swift; sourceTree = "<group>"; };
 		C9266FDC238FF4E700FA2E16 /* FeedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPresenter.swift; sourceTree = "<group>"; };
+		C93752B0239E14A200077FE6 /* Article+Conversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Article+Conversion.swift"; sourceTree = "<group>"; };
 		C94DEE48238C3F5900708074 /* RSSReaderFS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSSReaderFS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C94DEE4B238C3F5900708074 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C94DEE4D238C3F5900708074 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 				C9ABE6A3239B65060050312B /* ICacheService.swift */,
 				C9ABE6A5239B69B00050312B /* RSSReaderDataModel.xcdatamodeld */,
 				C9643F15239B7EE0005AC5FD /* User+Conversion.swift */,
+				C93752B0239E14A200077FE6 /* Article+Conversion.swift */,
 			);
 			path = Caches;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				C9B0168B23923F9700E87634 /* DateFormater+ISO8601.swift in Sources */,
 				C9ABE69A239B5A870050312B /* ILoginView.swift in Sources */,
 				C94DEE4E238C3F5900708074 /* SceneDelegate.swift in Sources */,
+				C93752B1239E14A200077FE6 /* Article+Conversion.swift in Sources */,
 				C9ABE6A4239B65060050312B /* ICacheService.swift in Sources */,
 				C9ABE698239B592A0050312B /* LoginPresenter.swift in Sources */,
 				C9B448442392438800263559 /* RSSDateFormater.swift in Sources */,

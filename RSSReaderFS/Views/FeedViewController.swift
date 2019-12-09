@@ -22,10 +22,6 @@ class FeedViewController: UIViewController {
         super.viewDidLoad()
         presenter.onViewReadyevent()
     }
-
-    @IBAction func updateButtonTap(_ sender: UIBarButtonItem) {
-        presenter.updateEvent()
-    }
     
 }
 

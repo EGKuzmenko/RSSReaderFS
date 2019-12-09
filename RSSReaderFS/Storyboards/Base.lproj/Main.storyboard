@@ -24,13 +24,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="VK1-UF-CJV">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="refresh" id="EPa-9e-GyV">
-                            <connections>
-                                <action selector="updateButtonTap:" destination="BYZ-38-t0r" id="4VA-3t-Y0H"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="VK1-UF-CJV"/>
                     <connections>
                         <outlet property="tableView" destination="04o-uG-vop" id="4je-Yw-ds1"/>
                     </connections>
