@@ -46,7 +46,10 @@ extension LoginViewController: ILoginView {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(identifier: "FeedViewController") as! FeedViewController
         guard let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene else {
-            return }
-        scene.windows.first?.rootViewController = UINavigationController(rootViewController: vc)
+            return
+        }
+        let navigation = UINavigationController(rootViewController: vc)
+        scene.windows.first?.rootViewController = navigation
+        
     }
 }
