@@ -14,10 +14,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let favoriteNewsStoryboard = UIStoryboard(name: "FavoriteNews", bundle: nil)
+        
+        let feedViewController = mainStoryboard.instantiateViewController(withIdentifier: "FeedViewController") as! FeedViewController
+        let favoriteNewsViewController = favoriteNewsStoryboard.instantiateViewController(withIdentifier: "FavoriteNewsViewController") as! FavoriteNewsViewController
+        
+        let tabBarController = UITabBarController()
+        tabBarController.viewControllers = [feedViewController, favoriteNewsViewController]
         guard let _ = (scene as? UIWindowScene) else { return }
+        window?.rootViewController = tabBarController
+        window?.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
