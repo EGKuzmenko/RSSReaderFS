@@ -14,5 +14,5 @@ protocol IFeedPresnter: AnyObject {
     func numberOfRowsInSection(section: Int) -> Int
     func itemForRowIndexPath(indexPath: IndexPath, imageResult: @escaping (UIImage?, IndexPath)->Void) -> Article
     func cancelImageDownload(indexPath: IndexPath) 
-    func onUpdateBuutonTapEvent()
+    func updateEvent()
 }

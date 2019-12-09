@@ -11,4 +11,6 @@ import Foundation
 protocol IFeedView: AnyObject {
     func setupInitialState()
     func updateView()
+    func refresh()
+    func endRefreshing()
 }

@@ -52,12 +52,13 @@ class FeedPresenter: IFeedPresnter {
         self.imageDownloadTasks[indexPath.row] = nil
     }
     
-    func onUpdateBuutonTapEvent() {
+    func updateEvent() {
         networkManager.loadData { [weak self] (articles) in
             self?.items = articles
             // TODO: clean map wiyh tasks
             DispatchQueue.main.async {
                 self?.view?.updateView()
+                self?.view?.endRefreshing()
             }
         }
     }
