@@ -42,7 +42,7 @@ class LoginPresenter: ILoginPresneter {
             return
         }
         
-        let user = User(login: userLogin, password: userPassword)
+        let user = User(login: userLogin, password: userPassword, isActive: true)
         
         cacheService.cacheUser(user: user)
     }

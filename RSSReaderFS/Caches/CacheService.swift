@@ -63,4 +63,14 @@ extension CacheService: ICacheService {
             return nil
         }
     }
+    
+    func cacheArticle(article:  Article) {
+        let context = self.persistentContainer.viewContext
+        
+        let entity = NSEntityDescription.entity(forEntityName: "Article", in: context)
+        let managedObject = NSManagedObject(entity: entity!, insertInto: context)
+        
+        let managedArticle = managedObject as! ArticleMO
+        
+    }
 }

@@ -4,12 +4,13 @@
         <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="articles" inverseEntity="User"/>
     </entity>
     <entity name="User" representedClassName="UserMO" syncable="YES">
+        <attribute name="isActive" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="login" attributeType="String"/>
         <attribute name="password" attributeType="String"/>
         <relationship name="articles" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Article" inverseName="user" inverseEntity="Article"/>
     </entity>
     <elements>
-        <element name="User" positionX="-63" positionY="-18" width="128" height="88"/>
         <element name="Article" positionX="-54" positionY="9" width="128" height="58"/>
+        <element name="User" positionX="-208.04296875" positionY="-35.265625" width="128" height="103"/>
     </elements>
 </model>

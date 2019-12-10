@@ -14,6 +14,7 @@ extension UserMO {
     func fill(_ user: User) {
         self.login = user.login
         self.password = user.password
+        self.isActive = user.isActive
     }
 }
 
@@ -22,5 +23,6 @@ extension User {
     init(_ user: UserMO) {
         self.login = user.login!
         self.password = user.password!
+        self.isActive = user.isActive
     }
 }
