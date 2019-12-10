@@ -43,12 +43,18 @@ extension LoginViewController: ILoginView {
     }
     
     func showMainStoryboard() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(identifier: "FeedViewController") as! FeedViewController
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let favoriteNewsStoryboard = UIStoryboard(name: "FavoriteNews", bundle: nil)
+        
+        let mainVC = mainStoryboard.instantiateViewController(identifier: "FeedViewController") as! FeedViewController
+        let favoriteVC = favoriteNewsStoryboard.instantiateViewController(withIdentifier: "FavoriteNewsViewController") as! FavoriteNewsViewController
+        
+        let tabBarController = UITabBarController()
+        tabBarController.viewControllers = [mainVC, favoriteVC]
         guard let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene else {
             return
         }
-        let navigation = UINavigationController(rootViewController: vc)
+        let navigation = UINavigationController(rootViewController: tabBarController)
         scene.windows.first?.rootViewController = navigation
         
     }
