@@ -12,4 +12,6 @@ struct User {
     var login: String
     
     var password: String
+    
+    var isActive: Bool
 }
