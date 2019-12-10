@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let storyboard = UIStoryboard(name: "Login", bundle: nil)
             let loginViewController = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
             window?.rootViewController = loginViewController
-            window?.makeKeyAndVisible()
+//            window?.makeKeyAndVisible()
         } else {
             let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
             
@@ -31,9 +31,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             
             let tabBarController = UITabBarController()
             tabBarController.viewControllers = [feedViewController, favoriteNewsViewController]
-            window?.rootViewController = tabBarController
-            window?.makeKeyAndVisible()
+            let navigation = UINavigationController(rootViewController: tabBarController)
+            window?.rootViewController = navigation
+//            window?.makeKeyAndVisible()
         }
+        window?.makeKeyAndVisible()
         
     }
 
