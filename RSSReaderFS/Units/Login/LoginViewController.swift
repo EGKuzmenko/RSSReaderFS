@@ -10,13 +10,21 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var userTextField: UITextField!
+    @IBOutlet weak var passTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func onSigninButtonTap(_ sender: UIButton) {
+    }
+    
+    @IBAction func onSignupButtonTap(_ sender: UIButton) {
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -27,4 +35,10 @@ class LoginViewController: UIViewController {
     }
     */
 
+}
+
+extension LoginViewController: ILoginView {
+    func setupInitialState() {
+        
+    }
 }

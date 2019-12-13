@@ -25,6 +25,8 @@
 		C9B016892392244100E87634 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B016882392244100E87634 /* NetworkManager.swift */; };
 		C9B0168B23923F9700E87634 /* DateFormater+ISO8601.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B0168A23923F9700E87634 /* DateFormater+ISO8601.swift */; };
 		C9B448442392438800263559 /* RSSDateFormater.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B448432392438800263559 /* RSSDateFormater.swift */; };
+		C9BC063023A3E95F00AEC2D2 /*  ILoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BC062F23A3E95F00AEC2D2 /*  ILoginPresenter.swift */; };
+		C9BC063223A3E98400AEC2D2 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BC063123A3E98400AEC2D2 /* LoginPresenter.swift */; };
 		C9D3179023992B2300AA6F62 /* URLFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D3178F23992B2300AA6F62 /* URLFactory.swift */; };
 		C9D5DAEB238FB8D700583F2A /* NewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9D5DAEA238FB8D700583F2A /* NewsCell.xib */; };
 		C9D5DAED238FB9AB00583F2A /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D5DAEC238FB9AB00583F2A /* NewsCell.swift */; };
@@ -51,6 +53,8 @@
 		C9B016882392244100E87634 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		C9B0168A23923F9700E87634 /* DateFormater+ISO8601.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormater+ISO8601.swift"; sourceTree = "<group>"; };
 		C9B448432392438800263559 /* RSSDateFormater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSDateFormater.swift; sourceTree = "<group>"; };
+		C9BC062F23A3E95F00AEC2D2 /*  ILoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " ILoginPresenter.swift"; sourceTree = "<group>"; };
+		C9BC063123A3E98400AEC2D2 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		C9D3178F23992B2300AA6F62 /* URLFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLFactory.swift; sourceTree = "<group>"; };
 		C9D5DAEA238FB8D700583F2A /* NewsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsCell.xib; sourceTree = "<group>"; };
 		C9D5DAEC238FB9AB00583F2A /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
@@ -134,6 +138,8 @@
 			children = (
 				C9ABE68B239B4F6C0050312B /* ILoginView.swift */,
 				C9ABE68D239B4F8F0050312B /* LoginViewController.swift */,
+				C9BC062F23A3E95F00AEC2D2 /*  ILoginPresenter.swift */,
+				C9BC063123A3E98400AEC2D2 /* LoginPresenter.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -278,9 +284,11 @@
 				C9D5DAED238FB9AB00583F2A /* NewsCell.swift in Sources */,
 				C9B016872392229D00E87634 /* News.swift in Sources */,
 				C9B0168B23923F9700E87634 /* DateFormater+ISO8601.swift in Sources */,
+				C9BC063223A3E98400AEC2D2 /* LoginPresenter.swift in Sources */,
 				C94DEE4E238C3F5900708074 /* SceneDelegate.swift in Sources */,
 				C9B448442392438800263559 /* RSSDateFormater.swift in Sources */,
 				C9266FDD238FF4E700FA2E16 /* FeedPresenter.swift in Sources */,
+				C9BC063023A3E95F00AEC2D2 /*  ILoginPresenter.swift in Sources */,
 				C9266FD9238FF12700FA2E16 /* IFeedPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

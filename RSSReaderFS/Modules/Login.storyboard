@@ -10,7 +10,7 @@
         <!--Login View Controller-->
         <scene sceneID="aDr-ot-m4i">
             <objects>
-                <viewController id="Zwu-4o-4T5" customClass="LoginViewController" customModule="RSSReaderFS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginSB" id="Zwu-4o-4T5" customClass="LoginViewController" customModule="RSSReaderFS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sfh-8F-KxJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,12 +26,18 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hyS-51-6OT">
-                                <rect key="frame" x="247" y="682" width="47" height="30"/>
-                                <state key="normal" title="Sign In"/>
+                                <rect key="frame" x="242" y="682" width="52" height="30"/>
+                                <state key="normal" title="Sign up"/>
+                                <connections>
+                                    <action selector="onSignupButtonTap:" destination="Zwu-4o-4T5" eventType="touchUpInside" id="dOF-mU-PuN"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wEe-TP-sMj">
-                                <rect key="frame" x="120" y="682" width="42" height="30"/>
-                                <state key="normal" title="Log In"/>
+                                <rect key="frame" x="120" y="682" width="47" height="30"/>
+                                <state key="normal" title="Sign in"/>
+                                <connections>
+                                    <action selector="onSigninButtonTap:" destination="Zwu-4o-4T5" eventType="touchUpInside" id="zWY-gp-2MH"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -49,6 +55,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ydg-eE-hfQ"/>
                     </view>
+                    <connections>
+                        <outlet property="passTextField" destination="QOF-90-2Ht" id="4Jl-Fl-JmU"/>
+                        <outlet property="userTextField" destination="yMt-0k-qqU" id="YJJ-lo-Deu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dfh-aQ-exM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
