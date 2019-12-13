@@ -10,10 +10,11 @@ import Foundation
 import class UIKit.UIImage
 
 class NetworkManager {
+    private let urlBuilder = URLBuilder()
     private let session: URLSession = URLSession.shared
     
     func loadData(completion: @escaping ([Article]) -> Void) {
-        guard let url = URL(string: "https://newsapi.org/v2/top-headlines?country=us&category=science&apiKey=37826ad6a0404352b3f3181d2d584aa9") else {
+        guard let url = urlBuilder.getArticlesURL(query: "Car", sortDescriptor: .popularity) else {
             return
         }
         
