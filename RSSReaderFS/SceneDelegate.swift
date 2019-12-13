@@ -23,20 +23,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //            window?.makeKeyAndVisible()
         } else {
             let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            
-            let favoriteNewsStoryboard = UIStoryboard(name: "FavoriteNews", bundle: nil)
-            
-            let feedViewController = mainStoryboard.instantiateViewController(withIdentifier: "FeedViewController") as! FeedViewController
-            let favoriteNewsViewController = favoriteNewsStoryboard.instantiateViewController(withIdentifier: "FavoriteNewsViewController") as! FavoriteNewsViewController
-            
-            let tabBarController = UITabBarController()
-            tabBarController.viewControllers = [feedViewController, favoriteNewsViewController]
-            let navigation = UINavigationController(rootViewController: tabBarController)
-            window?.rootViewController = navigation
+
+            let tabBarController = mainStoryboard.instantiateInitialViewController()
+            window?.rootViewController = tabBarController
 //            window?.makeKeyAndVisible()
         }
-        window?.makeKeyAndVisible()
         
+        window?.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
