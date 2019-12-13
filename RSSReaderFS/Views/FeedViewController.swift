@@ -65,6 +65,10 @@ extension FeedViewController: IFeedView {
         refreshControl.attributedTitle = NSAttributedString(string: "Loading")
         refreshControl.addTarget(self, action: #selector(refresh), for: UIControl.Event.valueChanged)
         tableView.addSubview(refreshControl)
+        
+        let selector = #selector(onSearchBarButtonTap)
+        let item = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: selector)
+        navigationItem.rightBarButtonItem = item
     }
     
     func updateView() {
@@ -73,6 +77,11 @@ extension FeedViewController: IFeedView {
     
     @objc func refresh() {
         presenter.updateEvent()
+    }
+    
+    @objc func onSearchBarButtonTap() {
+        // show alert
+        print(#function)
     }
     
     func endRefreshing() {
