@@ -96,18 +96,55 @@
 		C94DEE4A238C3F5900708074 /* RSSReaderFS */ = {
 			isa = PBXGroup;
 			children = (
+				C9BC062B23A3E81000AEC2D2 /* Units */,
 				C923F57D239A5280008A9AE0 /* Application */,
 				C9D3179A2399388C00AA6F62 /* Extensions */,
 				C9D317922399363700AA6F62 /* Storyboards */,
-				C9D31794239936AD00AA6F62 /* Presenters */,
-				C9D317952399378B00AA6F62 /* Views */,
 				C9D31796239937CA00AA6F62 /* Models */,
 				C9D317982399382C00AA6F62 /* Resources */,
 				C9D317992399383B00AA6F62 /* Networking */,
-				C9D5DAEA238FB8D700583F2A /* NewsCell.xib */,
 				C9B448432392438800263559 /* RSSDateFormater.swift */,
 			);
 			path = RSSReaderFS;
+			sourceTree = "<group>";
+		};
+		C9BC062B23A3E81000AEC2D2 /* Units */ = {
+			isa = PBXGroup;
+			children = (
+				C9BC062E23A3E8AD00AEC2D2 /* NewsCell */,
+				C9BC062D23A3E88100AEC2D2 /* Login */,
+				C9BC062C23A3E85E00AEC2D2 /* Feed */,
+			);
+			path = Units;
+			sourceTree = "<group>";
+		};
+		C9BC062C23A3E85E00AEC2D2 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				C9266FDC238FF4E700FA2E16 /* FeedPresenter.swift */,
+				C9266FD8238FF12700FA2E16 /* IFeedPresenter.swift */,
+				C94DEE4F238C3F5900708074 /* FeedViewController.swift */,
+				C9266FDA238FF28500FA2E16 /* IFeedView.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		C9BC062D23A3E88100AEC2D2 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				C9ABE68B239B4F6C0050312B /* ILoginView.swift */,
+				C9ABE68D239B4F8F0050312B /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		C9BC062E23A3E8AD00AEC2D2 /* NewsCell */ = {
+			isa = PBXGroup;
+			children = (
+				C9D5DAEA238FB8D700583F2A /* NewsCell.xib */,
+				C9D5DAEC238FB9AB00583F2A /* NewsCell.swift */,
+			);
+			path = NewsCell;
 			sourceTree = "<group>";
 		};
 		C9D317922399363700AA6F62 /* Storyboards */ = {
@@ -119,27 +156,6 @@
 			);
 			name = Storyboards;
 			path = Modules;
-			sourceTree = "<group>";
-		};
-		C9D31794239936AD00AA6F62 /* Presenters */ = {
-			isa = PBXGroup;
-			children = (
-				C9266FDC238FF4E700FA2E16 /* FeedPresenter.swift */,
-				C9266FD8238FF12700FA2E16 /* IFeedPresenter.swift */,
-			);
-			path = Presenters;
-			sourceTree = "<group>";
-		};
-		C9D317952399378B00AA6F62 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				C94DEE4F238C3F5900708074 /* FeedViewController.swift */,
-				C9266FDA238FF28500FA2E16 /* IFeedView.swift */,
-				C9D5DAEC238FB9AB00583F2A /* NewsCell.swift */,
-				C9ABE68B239B4F6C0050312B /* ILoginView.swift */,
-				C9ABE68D239B4F8F0050312B /* LoginViewController.swift */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		C9D31796239937CA00AA6F62 /* Models */ = {
