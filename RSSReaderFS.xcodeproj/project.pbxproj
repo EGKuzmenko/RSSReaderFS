@@ -27,7 +27,7 @@
 		C9B448442392438800263559 /* RSSDateFormater.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B448432392438800263559 /* RSSDateFormater.swift */; };
 		C9BC063023A3E95F00AEC2D2 /*  ILoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BC062F23A3E95F00AEC2D2 /*  ILoginPresenter.swift */; };
 		C9BC063223A3E98400AEC2D2 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BC063123A3E98400AEC2D2 /* LoginPresenter.swift */; };
-		C9D3179023992B2300AA6F62 /* URLFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D3178F23992B2300AA6F62 /* URLFactory.swift */; };
+		C9D3179023992B2300AA6F62 /* URLBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D3178F23992B2300AA6F62 /* URLBuilder.swift */; };
 		C9D4CF7223A71E430013B703 /* IFavoritePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D4CF7123A71E430013B703 /* IFavoritePresenter.swift */; };
 		C9D4CF7423A71E630013B703 /* IFavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D4CF7323A71E630013B703 /* IFavoriteView.swift */; };
 		C9D4CF7623A71E8A0013B703 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D4CF7523A71E8A0013B703 /* FavoriteViewController.swift */; };
@@ -59,7 +59,7 @@
 		C9B448432392438800263559 /* RSSDateFormater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSDateFormater.swift; sourceTree = "<group>"; };
 		C9BC062F23A3E95F00AEC2D2 /*  ILoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " ILoginPresenter.swift"; sourceTree = "<group>"; };
 		C9BC063123A3E98400AEC2D2 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
-		C9D3178F23992B2300AA6F62 /* URLFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLFactory.swift; sourceTree = "<group>"; };
+		C9D3178F23992B2300AA6F62 /* URLBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLBuilder.swift; sourceTree = "<group>"; };
 		C9D4CF7123A71E430013B703 /* IFavoritePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IFavoritePresenter.swift; sourceTree = "<group>"; };
 		C9D4CF7323A71E630013B703 /* IFavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IFavoriteView.swift; sourceTree = "<group>"; };
 		C9D4CF7523A71E8A0013B703 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
@@ -194,7 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				C9B016882392244100E87634 /* NetworkManager.swift */,
-				C9D3178F23992B2300AA6F62 /* URLFactory.swift */,
+				C9D3178F23992B2300AA6F62 /* URLBuilder.swift */,
 				C923F57B239A5266008A9AE0 /* INetworkManager.swift */,
 			);
 			path = Networking;
@@ -295,7 +295,7 @@
 				C9B016892392244100E87634 /* NetworkManager.swift in Sources */,
 				C9266FDB238FF28500FA2E16 /* IFeedView.swift in Sources */,
 				C923F57C239A5266008A9AE0 /* INetworkManager.swift in Sources */,
-				C9D3179023992B2300AA6F62 /* URLFactory.swift in Sources */,
+				C9D3179023992B2300AA6F62 /* URLBuilder.swift in Sources */,
 				C9ABE68C239B4F6C0050312B /* ILoginView.swift in Sources */,
 				C94DEE50238C3F5900708074 /* FeedViewController.swift in Sources */,
 				C9ABE68E239B4F8F0050312B /* LoginViewController.swift in Sources */,
