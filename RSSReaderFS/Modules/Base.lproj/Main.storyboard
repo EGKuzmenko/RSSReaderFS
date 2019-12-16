@@ -33,10 +33,10 @@
             </objects>
             <point key="canvasLocation" x="2868.115942028986" y="117.85714285714285"/>
         </scene>
-        <!--View Controller-->
+        <!--Favorite View Controller-->
         <scene sceneID="Vom-Sg-GRo">
             <objects>
-                <viewController storyboardIdentifier="FavoriteViewController" id="jIf-rJ-RCR" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FavoriteViewController" id="jIf-rJ-RCR" customClass="FavoriteViewController" customModule="RSSReaderFS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KUO-37-H8f">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -51,6 +51,9 @@
                         <viewLayoutGuide key="safeArea" id="r9g-x7-4UZ"/>
                     </view>
                     <navigationItem key="navigationItem" id="ehj-zR-ZQd"/>
+                    <connections>
+                        <outlet property="tableView" destination="h3s-eu-BnY" id="DIF-yW-14Y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sim-zb-Jic" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
