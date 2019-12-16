@@ -24,7 +24,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="VK1-UF-CJV"/>
+                    <navigationItem key="navigationItem" id="VK1-UF-CJV">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="search" id="mLl-5r-BcF">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="onSearchButtonTap:" destination="BYZ-38-t0r" id="9H9-8N-TmS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="04o-uG-vop" id="4je-Yw-ds1"/>
                     </connections>

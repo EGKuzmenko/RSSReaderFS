@@ -24,6 +24,8 @@ class FeedViewController: UIViewController {
         presenter.onViewReadyevent()
     }
     
+    @IBAction func onSearchButtonTap(_ sender: UIBarButtonItem) {
+    }
 }
 
 extension FeedViewController: UITableViewDataSource {
@@ -60,7 +62,7 @@ extension FeedViewController: IFeedView {
         let nib = UINib(nibName: "NewsCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "NewsCell")
         
-        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshControl.attributedTitle = NSAttributedString(string: "Loading...")
         refreshControl.addTarget(self, action: #selector(refresh), for: UIControl.Event.valueChanged)
         tableView.addSubview(refreshControl)
     }
