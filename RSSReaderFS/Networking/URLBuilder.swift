@@ -17,6 +17,6 @@ enum SortDescriptor: String {
 class URLBuilder {
     
     func getArticlesURL(query: String, sortDescriptor: SortDescriptor) -> URL? {
-        return URL(string: "https://newsapi.org/v2/everything?q=\(query)&from=2019-12-11&to=2019-12-11&sortBy=\(sortDescriptor.rawValue)&apiKey=\(API_KEY)")
+        return URL(string: "https://newsapi.org/v2/everything?q=\(query)&from=2019-12-11&to=2019-12-11&sortBy=\(sortDescriptor.rawValue)&apiKey=\(API_KEY)".encodeURL)
     }
 }

@@ -32,6 +32,7 @@
 		C9D4CF7423A71E630013B703 /* IFavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D4CF7323A71E630013B703 /* IFavoriteView.swift */; };
 		C9D4CF7623A71E8A0013B703 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D4CF7523A71E8A0013B703 /* FavoriteViewController.swift */; };
 		C9D4CF7823A71ECD0013B703 /* FavoritePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D4CF7723A71ECD0013B703 /* FavoritePresenter.swift */; };
+		C9D4CF7A23A728EE0013B703 /* String+EncodeURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D4CF7923A728EE0013B703 /* String+EncodeURL.swift */; };
 		C9D5DAEB238FB8D700583F2A /* NewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9D5DAEA238FB8D700583F2A /* NewsCell.xib */; };
 		C9D5DAED238FB9AB00583F2A /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D5DAEC238FB9AB00583F2A /* NewsCell.swift */; };
 /* End PBXBuildFile section */
@@ -64,6 +65,7 @@
 		C9D4CF7323A71E630013B703 /* IFavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IFavoriteView.swift; sourceTree = "<group>"; };
 		C9D4CF7523A71E8A0013B703 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		C9D4CF7723A71ECD0013B703 /* FavoritePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePresenter.swift; sourceTree = "<group>"; };
+		C9D4CF7923A728EE0013B703 /* String+EncodeURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+EncodeURL.swift"; sourceTree = "<group>"; };
 		C9D5DAEA238FB8D700583F2A /* NewsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsCell.xib; sourceTree = "<group>"; };
 		C9D5DAEC238FB9AB00583F2A /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -204,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				C9B0168A23923F9700E87634 /* DateFormater+ISO8601.swift */,
+				C9D4CF7923A728EE0013B703 /* String+EncodeURL.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 				C94DEE50238C3F5900708074 /* FeedViewController.swift in Sources */,
 				C9ABE68E239B4F8F0050312B /* LoginViewController.swift in Sources */,
 				C9D4CF7223A71E430013B703 /* IFavoritePresenter.swift in Sources */,
+				C9D4CF7A23A728EE0013B703 /* String+EncodeURL.swift in Sources */,
 				C94DEE4C238C3F5900708074 /* AppDelegate.swift in Sources */,
 				C923F57F239A53FB008A9AE0 /* User.swift in Sources */,
 				C9D4CF7623A71E8A0013B703 /* FavoriteViewController.swift in Sources */,
