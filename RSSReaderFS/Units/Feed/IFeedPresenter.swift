@@ -13,6 +13,5 @@ protocol IFeedPresenter: AnyObject {
     func onViewReadyevent()
     func numberOfRowsInSection(section: Int) -> Int
     func itemForRowIndexPath(indexPath: IndexPath, imageResult: @escaping (UIImage?)->Void) -> Article
-//    func cancelImageDownload(indexPath: IndexPath) 
-    func onUpdateBuutonTapEvent()
+    func updateEvent()
 }

@@ -11,6 +11,8 @@ import UIKit
 class FeedViewController: UIViewController {
 
     
+    private var refreshControl = UIRefreshControl()
+    
     private lazy var presenter: IFeedPresenter = {
         return FeedPresenter(view: self)
     }()
@@ -20,10 +22,6 @@ class FeedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.onViewReadyevent()
-    }
-
-    @IBAction func updateButtonTap(_ sender: UIBarButtonItem) {
-        presenter.onUpdateBuutonTapEvent()
     }
     
 }
@@ -59,10 +57,22 @@ extension FeedViewController: IFeedView {
         tableView.dataSource = self
         let nib = UINib(nibName: "NewsCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "NewsCell")
+        
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshControl.addTarget(self, action: #selector(refresh), for: UIControl.Event.valueChanged)
+        tableView.addSubview(refreshControl)
     }
     
     func updateView() {
         tableView.reloadData()
+    }
+    
+    @objc func refresh() {
+        presenter.updateEvent()
+    }
+    
+    func endRefreshing() {
+        refreshControl.endRefreshing()
     }
 }
 

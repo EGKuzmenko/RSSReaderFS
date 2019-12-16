@@ -13,14 +13,18 @@ class NetworkManager: INetworkManager {
     private let session: URLSession = URLSession.shared
     
     func loadData(completion: @escaping ([Article]) -> Void) {
-        guard let url = URL(string: "https://newsapi.org/v2/top-headlines?country=us&category=science&apiKey=37826ad6a0404352b3f3181d2d584aa9") else {
+        guard let url = URL(string: "https://newsapi.org/v2/top-headlines?country=us&category=science&apiKey=e1853145e03e45e2a92366970382ada1") else {
             return
         }
         
         let task = session.dataTask(with: url) { (data, response, error) in
             
             let decoder = JSONDecoder()
-            let news = try! decoder.decode(News.self, from: data!)
+            
+            guard let data = data else {
+                return
+            }
+            let news = try! decoder.decode(News.self, from: data)
             
             completion(news.articles)
         }
