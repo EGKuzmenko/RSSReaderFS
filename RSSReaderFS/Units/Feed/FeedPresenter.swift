@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import UIKit
 
 class FeedPresenter: IFeedPresenter {
 
@@ -30,7 +29,7 @@ class FeedPresenter: IFeedPresenter {
         return items.count
     }
     
-    func itemForRowIndexPath(indexPath: IndexPath, imageResult: @escaping (UIImage?) -> Void) -> Article {
+    func itemForRowIndexPath(indexPath: IndexPath, imageResult: @escaping (Data?) -> Void) -> Article {
         let item = items[indexPath.row]
         if let string = item.urlToImage, let url = URL(string: string) {
             self.networkManager.loadImage(url: url, completion: imageResult)

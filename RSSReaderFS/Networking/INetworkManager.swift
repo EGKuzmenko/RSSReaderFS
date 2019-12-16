@@ -7,9 +7,8 @@
 //
 
 import Foundation
-import class UIKit.UIImage
 
 protocol INetworkManager: AnyObject {
     func loadData(completion: @escaping ([Article]) -> Void)
-    func loadImage(url: URL, completion: @escaping (UIImage) -> Void)
+    func loadImage(url: URL, completion: @escaping (Data) -> Void)
 }

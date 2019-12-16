@@ -12,6 +12,6 @@ import class UIKit.UIImage
 protocol IFeedPresenter: AnyObject {
     func onViewReadyevent()
     func numberOfRowsInSection(section: Int) -> Int
-    func itemForRowIndexPath(indexPath: IndexPath, imageResult: @escaping (UIImage?)->Void) -> Article
+    func itemForRowIndexPath(indexPath: IndexPath, imageResult: @escaping (Data?)->Void) -> Article
     func updateEvent()
 }

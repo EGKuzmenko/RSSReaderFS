@@ -32,7 +32,7 @@ class NetworkManager: INetworkManager {
         task.resume()
     }
     
-    func loadImage(url: URL, completion: @escaping (UIImage) -> Void) {
+    func loadImage(url: URL, completion: @escaping (Data) -> Void) {
         
         let task = session.downloadTask(with: url) { (url, response, error) in
             
@@ -40,8 +40,8 @@ class NetworkManager: INetworkManager {
                 return
             }
             
-            let imageData = try! UIImage(data: Data(contentsOf: url))
-            completion(imageData!)
+            let imageData = try! Data(contentsOf: url)
+            completion(imageData)
         }
         
         task.resume()
