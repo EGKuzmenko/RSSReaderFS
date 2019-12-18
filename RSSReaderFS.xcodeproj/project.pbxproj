@@ -12,6 +12,8 @@
 		C9266FD9238FF12700FA2E16 /* IFeedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9266FD8238FF12700FA2E16 /* IFeedPresenter.swift */; };
 		C9266FDB238FF28500FA2E16 /* IFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9266FDA238FF28500FA2E16 /* IFeedView.swift */; };
 		C9266FDD238FF4E700FA2E16 /* FeedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9266FDC238FF4E700FA2E16 /* FeedPresenter.swift */; };
+		C93BD8A223AA95DF00DDBBDA /* Date+yesterdayDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93BD8A123AA95DF00DDBBDA /* Date+yesterdayDay.swift */; };
+		C9425A4823A916C600749888 /* ArticlesParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9425A4723A916C600749888 /* ArticlesParams.swift */; };
 		C94DEE4C238C3F5900708074 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94DEE4B238C3F5900708074 /* AppDelegate.swift */; };
 		C94DEE4E238C3F5900708074 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94DEE4D238C3F5900708074 /* SceneDelegate.swift */; };
 		C94DEE50238C3F5900708074 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94DEE4F238C3F5900708074 /* FeedViewController.swift */; };
@@ -43,6 +45,8 @@
 		C9266FD8238FF12700FA2E16 /* IFeedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IFeedPresenter.swift; sourceTree = "<group>"; };
 		C9266FDA238FF28500FA2E16 /* IFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IFeedView.swift; sourceTree = "<group>"; };
 		C9266FDC238FF4E700FA2E16 /* FeedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPresenter.swift; sourceTree = "<group>"; };
+		C93BD8A123AA95DF00DDBBDA /* Date+yesterdayDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+yesterdayDay.swift"; sourceTree = "<group>"; };
+		C9425A4723A916C600749888 /* ArticlesParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesParams.swift; sourceTree = "<group>"; };
 		C94DEE48238C3F5900708074 /* RSSReaderFS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSSReaderFS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C94DEE4B238C3F5900708074 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C94DEE4D238C3F5900708074 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -140,6 +144,7 @@
 				C9266FD8238FF12700FA2E16 /* IFeedPresenter.swift */,
 				C94DEE4F238C3F5900708074 /* FeedViewController.swift */,
 				C9266FDA238FF28500FA2E16 /* IFeedView.swift */,
+				C9425A4723A916C600749888 /* ArticlesParams.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -207,6 +212,7 @@
 			children = (
 				C9B0168A23923F9700E87634 /* DateFormater+ISO8601.swift */,
 				C9D4CF7923A728EE0013B703 /* String+EncodeURL.swift */,
+				C93BD8A123AA95DF00DDBBDA /* Date+yesterdayDay.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -305,11 +311,13 @@
 				C9D4CF7223A71E430013B703 /* IFavoritePresenter.swift in Sources */,
 				C9D4CF7A23A728EE0013B703 /* String+EncodeURL.swift in Sources */,
 				C94DEE4C238C3F5900708074 /* AppDelegate.swift in Sources */,
+				C9425A4823A916C600749888 /* ArticlesParams.swift in Sources */,
 				C923F57F239A53FB008A9AE0 /* User.swift in Sources */,
 				C9D4CF7623A71E8A0013B703 /* FavoriteViewController.swift in Sources */,
 				C9D5DAED238FB9AB00583F2A /* NewsCell.swift in Sources */,
 				C9B016872392229D00E87634 /* News.swift in Sources */,
 				C9B0168B23923F9700E87634 /* DateFormater+ISO8601.swift in Sources */,
+				C93BD8A223AA95DF00DDBBDA /* Date+yesterdayDay.swift in Sources */,
 				C9BC063223A3E98400AEC2D2 /* LoginPresenter.swift in Sources */,
 				C9D4CF7423A71E630013B703 /* IFavoriteView.swift in Sources */,
 				C94DEE4E238C3F5900708074 /* SceneDelegate.swift in Sources */,
