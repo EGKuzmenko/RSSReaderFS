@@ -9,6 +9,6 @@
 import Foundation
 
 protocol INetworkManager: AnyObject {
-    func loadData(completion: @escaping ([Article]) -> Void)
+    func loadData(params: ArticlesParams, completion: @escaping ([Article]) -> Void)
     func loadImage(url: URL, completion: @escaping (Data) -> Void)
 }

@@ -14,8 +14,8 @@ class NetworkManager: INetworkManager {
     
     private let session: URLSession = URLSession.shared
     
-    func loadData(completion: @escaping ([Article]) -> Void) {
-        guard let url = urlBuilder.getArticlesURL(query: "Новый год", sortDescriptor: .popularity) else {
+    func loadData(params: ArticlesParams, completion: @escaping ([Article]) -> Void) {
+        guard let url = urlBuilder.getArticlesURL(params: params) else {
             return
         }
         
