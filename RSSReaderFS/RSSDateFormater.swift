@@ -15,4 +15,9 @@ struct RSSDateFormater {
         dateFormater.dateFormat = "dd.MM.yyyy"
         return dateFormater.string(from: date)
     }
+    
+    static func urlDate(from date: Date) -> String {
+        dateFormater.dateFormat = "yyyy-MM-dd"
+        return dateFormater.string(from: date)
+    }
 }
