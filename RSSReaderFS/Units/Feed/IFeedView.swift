@@ -13,4 +13,5 @@ protocol IFeedView: AnyObject {
     func updateView()
     func refresh()
     func endRefreshing()
+    func showAlertWithTextField()
 }

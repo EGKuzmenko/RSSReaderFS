@@ -14,4 +14,5 @@ protocol IFeedPresenter: AnyObject {
     func numberOfRowsInSection(section: Int) -> Int
     func itemForRowIndexPath(indexPath: IndexPath, imageResult: @escaping (Data?)->Void) -> Article
     func updateEvent()
+    func setSearch( _ :String)
 }

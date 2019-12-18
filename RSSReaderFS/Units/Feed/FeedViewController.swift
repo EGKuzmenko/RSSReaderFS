@@ -25,6 +25,7 @@ class FeedViewController: UIViewController {
     }
     
     @IBAction func onSearchButtonTap(_ sender: UIBarButtonItem) {
+        
     }
 }
 
@@ -50,7 +51,16 @@ extension FeedViewController: UITableViewDataSource {
 }
 
 extension FeedViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let action = UITableViewRowAction(style: .normal, title: "В избранное") { (action, indexPath) in
+            print("Cell with indexPath: \(indexPath) was favourited.")
+        }
+        return [action]
+    }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+    }
 }
 
 
@@ -58,6 +68,7 @@ extension FeedViewController: IFeedView {
     func setupInitialState() {
         title = "RSS Reader"
         
+        tableView.delegate = self
         tableView.dataSource = self
         let nib = UINib(nibName: "NewsCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "NewsCell")
@@ -77,6 +88,14 @@ extension FeedViewController: IFeedView {
     
     func endRefreshing() {
         refreshControl.endRefreshing()
+    }
+    
+    func showAlertWithTextField() {
+        let alert = UIAlertController(title: "Search", message: "Search something news", preferredStyle: .alert)
+        let action = UIAlertAction(title: " ", style: .default) { [weak self] (alertAction) in
+            let textField = alert.textFields![0] as UITextField
+            
+        }
     }
 }
 

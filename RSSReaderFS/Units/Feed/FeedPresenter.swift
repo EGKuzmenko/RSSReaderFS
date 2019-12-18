@@ -10,6 +10,7 @@ import Foundation
 
 class FeedPresenter: IFeedPresenter {
 
+    private var artclesParams = ArticlesParams()
     
     private weak var view: IFeedView?
     
@@ -42,7 +43,7 @@ class FeedPresenter: IFeedPresenter {
     }
     
     func updateEvent() {
-        networkManager.loadData { [weak self] (articles) in
+        networkManager.loadData(params: artclesParams) { [weak self] (articles) in
             self?.items = articles
             DispatchQueue.main.async {
                 self?.view?.updateView()
@@ -51,5 +52,8 @@ class FeedPresenter: IFeedPresenter {
         }
     }
     
+    func setSearch(_ search: String) {
+        self.artclesParams.search = search
+    }
     
 }
