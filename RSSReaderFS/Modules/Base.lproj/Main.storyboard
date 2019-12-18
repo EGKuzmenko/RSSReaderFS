@@ -109,7 +109,9 @@
         <scene sceneID="0Bg-F3-knB">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8pj-6g-u5K" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="heart.fill" catalog="system" id="Hrk-vw-dyN"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="heart.fill" catalog="system" id="Hrk-vw-dyN">
+                        <color key="badgeColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zUq-DV-Yr5">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>

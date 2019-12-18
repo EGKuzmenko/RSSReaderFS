@@ -25,7 +25,7 @@ class FeedViewController: UIViewController {
     }
     
     @IBAction func onSearchButtonTap(_ sender: UIBarButtonItem) {
-        
+        self.showAlertWithTextField()
     }
 }
 
@@ -91,11 +91,29 @@ extension FeedViewController: IFeedView {
     }
     
     func showAlertWithTextField() {
-        let alert = UIAlertController(title: "Search", message: "Search something news", preferredStyle: .alert)
-        let action = UIAlertAction(title: " ", style: .default) { [weak self] (alertAction) in
+        let alert = UIAlertController(title: "Search", message: "Look for news", preferredStyle: .alert)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+
+        let searchAction = UIAlertAction(title: "Article Input", style: .default) { [weak self] (alertAction) in
             let textField = alert.textFields![0] as UITextField
-            
+            if textField.text == "" {
+                return
+            } else {
+                self?.presenter.setSearch(textField.text!)
+                self?.presenter.updateEvent()
+            }
         }
+        
+        
+        alert.addTextField { (textField) in
+            textField.placeholder = "Enter the keyword"
+        }
+        
+        alert.addAction(cancelAction)
+        alert.addAction(searchAction)
+        
+        self.present(alert, animated: true)
     }
 }
 
