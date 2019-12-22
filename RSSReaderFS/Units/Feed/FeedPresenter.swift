@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SafariServices
 
 class FeedPresenter: IFeedPresenter {
 
@@ -17,6 +18,7 @@ class FeedPresenter: IFeedPresenter {
     private var items: [Article] = []
     
     private var networkManager = NetworkManager()
+    
     
     init(view: IFeedView) {
         self.view = view
@@ -54,6 +56,20 @@ class FeedPresenter: IFeedPresenter {
     
     func setSearch(_ search: String) {
         self.artclesParams.search = search
+    }
+    
+    func linkToSafari(url: String) {
+        guard let url = URL(string: url) else {
+            return
+        }
+        if UIApplication.shared.canOpenURL(url) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
+        
+    }
+    
+    func getItem(indexPath: IndexPath) -> Article {
+        return items[indexPath.row]
     }
     
 }

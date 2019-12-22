@@ -61,6 +61,12 @@ extension FeedViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let item = presenter.getItem(indexPath: indexPath)
+        presenter.linkToSafari(url: item.url)
+        
+    }
 }
 
 
@@ -93,16 +99,17 @@ extension FeedViewController: IFeedView {
     func showAlertWithTextField() {
         let alert = UIAlertController(title: "Search", message: "Look for news", preferredStyle: .alert)
         
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
-
-        let searchAction = UIAlertAction(title: "Article Input", style: .default) { [weak self] (alertAction) in
+        let cancelAction = UIAlertAction(title: "Cancel", style: .destructive) { [weak self] _ in
+            self?.view.endEditing(true)
+        }
+        
+        let searchAction = UIAlertAction(title: "Ok", style: .default) { [weak self] _ in
             let textField = alert.textFields![0] as UITextField
-            if textField.text == "" {
+            guard let text = textField.text, text.count > 1 else {
                 return
-            } else {
-                self?.presenter.setSearch(textField.text!)
-                self?.presenter.updateEvent()
             }
+            self?.presenter.setSearch(textField.text!)
+            self?.presenter.updateEvent()
         }
         
         
@@ -110,9 +117,9 @@ extension FeedViewController: IFeedView {
             textField.placeholder = "Enter the keyword"
         }
         
-        alert.addAction(cancelAction)
         alert.addAction(searchAction)
-        
+        alert.addAction(cancelAction)
+
         self.present(alert, animated: true)
     }
 }

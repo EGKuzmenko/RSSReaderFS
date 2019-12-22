@@ -15,4 +15,6 @@ protocol IFeedPresenter: AnyObject {
     func itemForRowIndexPath(indexPath: IndexPath, imageResult: @escaping (Data?)->Void) -> Article
     func updateEvent()
     func setSearch( _ :String)
+    func linkToSafari(url: String)
+    func getItem(indexPath: IndexPath) -> Article
 }
