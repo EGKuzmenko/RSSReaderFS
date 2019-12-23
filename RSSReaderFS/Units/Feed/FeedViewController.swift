@@ -53,6 +53,8 @@ extension FeedViewController: UITableViewDataSource {
 extension FeedViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let action = UITableViewRowAction(style: .normal, title: "В избранное") { (action, indexPath) in
+            let item = self.presenter.getItem(indexPath: indexPath)
+            self.presenter.saveToFavorite(article: item)
             print("Cell with indexPath: \(indexPath) was favourited.")
         }
         return [action]

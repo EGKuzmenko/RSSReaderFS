@@ -9,5 +9,11 @@
 import Foundation
 
 protocol IFavoritePresenter: AnyObject {
-    
+    func onViewReadyEvent()
+    func numberOfRowsInSection(section: Int) -> Int
+    func itemForRowIndexPath(indexPath: IndexPath, imageResult: @escaping (Data?)->Void) -> Article
+    func linkToSafari(url: String)
+    func getItems()
+    func updateEvent()
+
 }

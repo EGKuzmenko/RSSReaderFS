@@ -9,5 +9,8 @@
 import Foundation
 
 protocol IFavoriteView: AnyObject {
-    
+    func setupInitialState()
+    func refresh()
+    func updateView()
+    func endRefreshing()
 }

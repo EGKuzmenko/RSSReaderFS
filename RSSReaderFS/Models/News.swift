@@ -48,6 +48,16 @@ struct Article: Decodable {
                     debugDescription: "Date string does not match format expected by formatter.")
           }
     }
+    
+    init(managedArtice: ArticleMO) {
+        source = Source(id: "", name: "")
+        author = nil
+        title = managedArtice.title ?? ""
+        articleDescription = managedArtice.articleDescription
+        url = managedArtice.url ?? ""
+        urlToImage = managedArtice.urlToImage
+        publishedAt = managedArtice.date!
+    }
 }
 
 struct Source: Decodable {

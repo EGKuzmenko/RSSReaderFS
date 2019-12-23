@@ -12,33 +12,69 @@ class FavoriteViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    private var refreshControl = UIRefreshControl()
+
+    private lazy var presenter: IFavoritePresenter = {
+        return FavoritePresenter(view: self)
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        presenter.onViewReadyEvent()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 
 extension FavoriteViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        presenter.numberOfRowsInSection(section: section)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "NewsCell") as! NewsCell
+        let item = presenter.itemForRowIndexPath(indexPath: indexPath, imageResult: { pic in
+            DispatchQueue.main.async {
+                guard let pic = pic else {
+                    return
+                }
+                cell.pictureView?.image = UIImage(data: pic)
+            }
+        })
+        cell.configureWith(article: item)
+        
+        return cell
+    }
+}
+
+
+extension FavoriteViewController: UITableViewDelegate {
+    
+}
+
+extension FavoriteViewController: IFavoriteView {
+    func setupInitialState() {
+        title = "Favorite news"
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        let nib = UINib(nibName: "NewsCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "NewsCell")
+        
+        refreshControl.attributedTitle = NSAttributedString(string: "Loading...")
+        refreshControl.addTarget(self, action: #selector(refresh), for: UIControl.Event.valueChanged)
+        tableView.addSubview(refreshControl)
     }
     
+    @objc func refresh() {
+        presenter.updateEvent()
+    }
     
+    func updateView() {
+        tableView.reloadData()
+    }
+    
+    func endRefreshing() {
+        refreshControl.endRefreshing()
+    }
 }

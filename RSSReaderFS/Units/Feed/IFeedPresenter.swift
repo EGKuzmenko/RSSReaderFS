@@ -17,4 +17,5 @@ protocol IFeedPresenter: AnyObject {
     func setSearch( _ :String)
     func linkToSafari(url: String)
     func getItem(indexPath: IndexPath) -> Article
+    func saveToFavorite(article: Article)
 }

@@ -10,7 +10,7 @@ import Foundation
 import SafariServices
 
 class FeedPresenter: IFeedPresenter {
-
+    
     private var artclesParams = ArticlesParams()
     
     private weak var view: IFeedView?
@@ -18,6 +18,9 @@ class FeedPresenter: IFeedPresenter {
     private var items: [Article] = []
     
     private var networkManager = NetworkManager()
+    
+    private let cacheService = CacheService()
+
     
     
     init(view: IFeedView) {
@@ -70,6 +73,10 @@ class FeedPresenter: IFeedPresenter {
     
     func getItem(indexPath: IndexPath) -> Article {
         return items[indexPath.row]
+    }
+    
+    func saveToFavorite(article: Article) {
+        cacheService.cache(article: article)
     }
     
 }
